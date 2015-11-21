@@ -110,8 +110,8 @@ a:active {
 	padding-right: 2px;
 }
 
-/*.form-group .alerts*/
-.form-group .alert {
+/*#setupForm .alerts*/
+#setupForm .alert {
 	margin-bottom: 0;
 }
 /*main styling end*/
