@@ -21,7 +21,9 @@
  			<div class="col-sm-10">
  				{url|assign:"setupFormUrl" op="setup" path="2" escape=false}
  				{form_language_chooser form="setupForm" url=$setupFormUrl}
- 				<small class="instruct">{translate key="form.formLanguage.description"}</small>
+ 				<div class="alert alert-info">
+ 					<small class="instruct"> {translate key="form.formLanguage.description"}</small>
+ 				</div>
  			</div>
  		</div>
  	</div>
@@ -64,7 +66,9 @@
  					<label for="mailSubmissionsToReviewers-0">
  						<input type="radio" name="mailSubmissionsToReviewers" id="mailSubmissionsToReviewers-0" value="0"{if not $mailSubmissionsToReviewers} checked="checked"{/if} />
  						<p><strong>{translate key="manager.setup.reviewProcessStandard"}</strong></p>
- 						<small class="instruct">{translate key="manager.setup.reviewProcessStandardDescription"}</small>
+ 						<div class="alert alert-info">
+ 							<small class="instruct">{translate key="manager.setup.reviewProcessStandardDescription"}</small>
+ 						</div>
  					</label>	
 
  				</div>
@@ -75,7 +79,9 @@
  					<label for="mailSubmissionsToReviewers-1">
  						<input type="radio" name="mailSubmissionsToReviewers" id="mailSubmissionsToReviewers-1" value="1"{if $mailSubmissionsToReviewers} checked="checked"{/if} />
  						<p><strong>{translate key="manager.setup.reviewProcessEmail"}</strong></p>
- 						<small class="instruct">{translate key="manager.setup.reviewProcessEmailDescription"}</small>
+ 						<div class="alert alert-info">
+ 							<small class="instruct">{translate key="manager.setup.reviewProcessEmailDescription"}</small>
+ 						</div>
  					</label>
  				</div>
  			</div> {**<!--.form-group-->**}
@@ -170,7 +176,9 @@
 				{translate key="manager.setup.reviewOptions.reviewerAccessKeysEnabled"}</label>
 			</div>
 			<br/>
-			<small class="instruct">{translate key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"}</small>
+			<div class="alert alert-info">
+				<small class="instruct"> {translate key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"}</small>
+			</div>
 			<br/>
 			<div class="checkbox">
 				<label for="restrictReviewerFileAccess">
@@ -280,7 +288,9 @@
 				<div class="form-group journal-setup">
 					<textarea name="lockssLicense[{$formLocale|escape}]" id="lockssLicense" rows="6" cols="60" class="form-control">{$lockssLicense[$formLocale]|escape}</textarea>
 					<br />
-					<small class="instruct">{translate key="manager.setup.lockssLicenses"}</small>
+					<div class="alert alert-info">
+						<small class="instruct"> {translate key="manager.setup.lockssLicenses"}</small> 
+					</div>
 				</div>
 			</div>
 
@@ -309,9 +319,9 @@
 						</div>
 					</div>
 					{if !$smarty.foreach.reviewerDatabaseLinks.last}
-					
+
 					<hr>
-					
+
 					{/if}
 					{foreachelse}
 					<div class="form-group">
