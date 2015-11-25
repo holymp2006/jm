@@ -73,7 +73,7 @@
 		{/if}{* $showRemember *}
 
         <div class="form-group">
-            <input type="submit" value="{translate key="user.login"}" class="btn btn-default">
+            <input type="submit" value="{translate key="user.login"}" class="btn btn-primary">
         </div> 
 
 		</div>
