@@ -369,24 +369,38 @@
 
  		<p>{translate key="manager.setup.notifications.description"}</p>
 
- 		<table width="100%" class="data">
- 			<tr valign="top">
- 				<td class="label"><input {if !$submissionAckEnabled}disabled="disabled" {/if}type="checkbox" name="copySubmissionAckPrimaryContact" id="copySubmissionAckPrimaryContact" value="true" {if $copySubmissionAckPrimaryContact}checked="checked"{/if}/></td>
- 				<td class="value">{fieldLabel name="copySubmissionAckPrimaryContact" key="manager.setup.notifications.copyPrimaryContact"}</td>
- 			</tr>
- 			<tr valign="top">
- 				<td class="label"><input {if !$submissionAckEnabled}disabled="disabled" {/if}type="checkbox" name="copySubmissionAckSpecified" id="copySubmissionAckSpecified" value="true" {if $copySubmissionAckSpecified}checked="checked"{/if}/></td>
- 				<td class="value">{fieldLabel name="copySubmissionAckAddress" key="manager.setup.notifications.copySpecifiedAddress"}&nbsp;&nbsp;<input {if !$submissionAckEnabled}disabled="disabled" {/if}type="text" class="textField" id="copySubmissionAckAddress" name="copySubmissionAckAddress" value="{$copySubmissionAckAddress|escape}"/></td>
- 			</tr>
- 			{if !$submissionAckEnabled}
- 			<tr valign="top">
- 				<td>&nbsp;</td>
+ 		<div class="form-group">
+ 			<div class="checkbox">
+ 				<label for="copySubmissionAckPrimaryContact">
+ 					<input {if !$submissionAckEnabled}disabled="disabled" {/if}type="checkbox" name="copySubmissionAckPrimaryContact" id="copySubmissionAckPrimaryContact" value="true" {if $copySubmissionAckPrimaryContact}checked="checked"{/if}/>&nbsp;
+ 					{translate key="manager.setup.notifications.copyPrimaryContact"}
+ 				</label>
+
+ 			</div>
+
+ 			<div class="row">
+ 				<div class="col-sm-5 control-label">
+ 					<div class="checkbox">
+ 						<label for="copySubmissionAckAddress">
+ 							<input {if !$submissionAckEnabled}disabled="disabled" {/if}type="checkbox" name="copySubmissionAckSpecified" id="copySubmissionAckSpecified" value="true" {if $copySubmissionAckSpecified}checked="checked"{/if}/>&nbsp;
+ 							{translate key="manager.setup.notifications.copySpecifiedAddress"}
+
+ 						</label>
+ 					</div>
+ 				</div>
+ 				<div class="col-sm-7">		
+ 					<input {if !$submissionAckEnabled}disabled="disabled" {/if}type="text" class="form-control" id="copySubmissionAckAddress" name="copySubmissionAckAddress" value="{$copySubmissionAckAddress|escape}"/>
+ 				</div>
+ 			</div>
+
+ 			<div class="form-group">
+ 				{if !$submissionAckEnabled} 					
  				{url|assign:"preparedEmailsUrl" op="emails"}
- 				<td>{translate key="manager.setup.notifications.submissionAckDisabled" preparedEmailsUrl=$preparedEmailsUrl}</td>
- 			</tr>
- 			{/if}
- 		</table>
- 	</div>
+ 				{translate key="manager.setup.notifications.submissionAckDisabled" preparedEmailsUrl=$preparedEmailsUrl}
+ 				{/if}
+ 			</div>
+ 		</div>
+ 	</div> <!--#notifications-->
 
  	<hr>
 
@@ -395,18 +409,17 @@
 
  		<a name="metaCitationEditing"></a>
  		{if $citationEditorError}
- 		<p>{translate key=$citationEditorError}</p>
+ 		<div class="alert alert-danger">{translate key=$citationEditorError}</div>
  		{else}
  		<p>{translate key="manager.setup.metaCitationsDescription"}</p>
- 		<table width="100%" class="data">
- 			<tr valign="top">
- 				<td width="5%" class="label">
- 					<input type="checkbox" name="metaCitations" id="metaCitations" value="1"{if $metaCitations} checked="checked"{/if} />
- 				</td>
- 				<td width="95%" class="value"><label for="metaCitations">{translate key="manager.setup.citations"}</label>
- 				</td>
- 			</tr>
- 		</table>
+ 		<div class="form-group">
+ 			<div class="checkbox">
+ 				<label for="metaCitations"> 				
+ 					<input type="checkbox" name="metaCitations" id="metaCitations" value="1"{if $metaCitations} checked="checked"{/if} />&nbsp;
+ 					{translate key="manager.setup.citations"}
+ 				</label>
+ 			</div>
+ 		</div> <!--.form-group-->
 
  		<div id="citationFilterSetupToggle" {if !$metaCitations}style="visible: none"{/if}>
  			<h4>{translate key="manager.setup.citationFilterParser"}</h4>
@@ -418,7 +431,7 @@
  			{load_url_in_div id="lookupFilterGridContainer" loadMessageId="manager.setup.filter.lookup.grid.loadMessage" url="$lookupFilterGridUrl"}
  			<h4>{translate key="manager.setup.citationOutput"}</h4>
  			<p>{translate key="manager.setup.citationOutputStyleDescription"}</p>
- 			{fbvElement type="select" id="metaCitationOutputFilterSelect" name="metaCitationOutputFilterId"
+ 			{fbvElement class="form-control" type="select" id="metaCitationOutputFilterSelect" name="metaCitationOutputFilterId"
  			from=$metaCitationOutputFilters translate=false selected=$metaCitationOutputFilterId|escape
  			defaultValue="-1" defaultLabel="manager.setup.filter.pleaseSelect"|translate}
  		</div>
