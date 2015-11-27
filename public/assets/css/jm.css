@@ -124,6 +124,13 @@ a:active {
 .mt-20 {
 	margin-top: 20px;
 }
+/*misc*/
+.checkbox .control-label {
+	padding-left: 35px;
+}
+.checkbox > .form-group {
+	padding-left: 20px;
+}
 
 /*main styling end*/
 
