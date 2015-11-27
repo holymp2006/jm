@@ -311,66 +311,47 @@
  			<div class="checkbox">
  				<label for="metaCoverage">
  					<h4>
- 					<input type="checkbox" name="metaCoverage" id="metaCoverage" value="1"{if $metaCoverage} checked="checked"{/if} />
- 					{translate key="manager.setup.coverage"} 
- 					<small class="help-block">{translate key="manager.setup.coverageDescription"}</small>						
+ 						<input type="checkbox" name="metaCoverage" id="metaCoverage" value="1"{if $metaCoverage} checked="checked"{/if} />
+ 						{translate key="manager.setup.coverage"} 
+ 						<small class="help-block">{translate key="manager.setup.coverageDescription"}</small>						
  					</h4>
  				</label>
- 			</div>
- 			<div class="form-group">
- 				<p class="instruct">{translate key="manager.setup.coverageGeoProvideExamples"}:</p>
- 				<input type="text" name="metaCoverageGeoExamples[{$formLocale|escape}]" id="metaCoverageGeoExamples" value="{$metaCoverageGeoExamples[$formLocale]|escape}" size="60" class="form-control" placeholder='{translate key="manager.setup.coverageGeoExamples"}'/>
+
+ 				<div class="form-group">
+ 					<p class="instruct">{translate key="manager.setup.coverageGeoProvideExamples"}:</p>
+ 					<input type="text" name="metaCoverageGeoExamples[{$formLocale|escape}]" id="metaCoverageGeoExamples" value="{$metaCoverageGeoExamples[$formLocale]|escape}" size="60" class="form-control" placeholder='{translate key="manager.setup.coverageGeoExamples"}'/>
+ 				</div>
+
+ 				<div class="form-group">
+ 					<p class="instruct">{translate key="manager.setup.coverageChronProvideExamples"}:</p>
+ 					<input type="text" name="metaCoverageChronExamples[{$formLocale|escape}]" id="metaCoverageChronExamples" value="{$metaCoverageChronExamples[$formLocale]|escape}" size="60" class="form-control" placeholder='{translate key="manager.setup.coverageChronExamples"}'/>
+ 				</div>
+
+ 				<div class="form-group">
+ 					<p class="instruct">{translate key="manager.setup.coverageResearchSampleProvideExamples"}:</p>
+ 					<input type="text" name="metaCoverageResearchSampleExamples[{$formLocale|escape}]" id="metaCoverageResearchSampleExamples" value="{$metaCoverageResearchSampleExamples[$formLocale]|escape}" size="60" class="form-control" placeholder='{translate key="manager.setup.coverageResearchSampleExamples"}'/>		
+ 				</div>
  			</div>
  		</div> <!--.form-group-->
 
  		<hr>
- 		
- 		<tr valign="top">
- 			<td>&nbsp;</td>
- 			<td class="value">
- 				<span class="instruct">{translate key="manager.setup.coverageChronProvideExamples"}:</span>
- 				<br />
- 				<input type="text" name="metaCoverageChronExamples[{$formLocale|escape}]" id="metaCoverageChronExamples" value="{$metaCoverageChronExamples[$formLocale]|escape}" size="60" class="textField" />
- 				<br />
- 				<span class="instruct">{translate key="manager.setup.coverageChronExamples"}</span>
- 			</td>
- 		</tr>
- 		<tr>
- 			<td class="separator" colspan="2">&nbsp;</td>
- 		</tr>
- 		<tr valign="top">
- 			<td>&nbsp;</td>
- 			<td class="value">
- 				<span class="instruct">{translate key="manager.setup.coverageResearchSampleProvideExamples"}:</span>
- 				<br />
- 				<input type="text" name="metaCoverageResearchSampleExamples[{$formLocale|escape}]" id="metaCoverageResearchSampleExamples" value="{$metaCoverageResearchSampleExamples[$formLocale]|escape}" size="60" class="textField" />
- 				<br />
- 				<span class="instruct">{translate key="manager.setup.coverageResearchSampleExamples"}</span>
- 			</td>
- 		</tr>
 
- 		<tr>
- 			<td class="separator" colspan="2"><br />&nbsp;</td>
- 		</tr>
+ 		<div class="form-group">
+ 			<div class="checkbox">
+ 				<label for="metaType">
+ 					<h4>
+ 						<input type="checkbox" name="metaType" id="metaType" value="1"{if $metaType} checked="checked"{/if} /> 	
+ 						{translate key="manager.setup.typeMethodApproach"}					
+ 					</h4>
+ 				</label>
+ 				<div class="form-group">
+ 					<p class="instruct">{translate key="manager.setup.typeProvideExamples"}:</p>
+ 					<input type="text" name="metaTypeExamples[{$formLocale|escape}]" id="metaTypeExamples" value="{$metaTypeExamples[$formLocale]|escape}" size="60" class="form-control" placeholder='{translate key="manager.setup.typeExamples"}'/>
+ 				</div>
+ 			</div>
+ 		</div> <!--.form-group-->
 
- 		<tr valign="top">
- 			<td width="5%" class="label" valign="bottom"><input type="checkbox" name="metaType" id="metaType" value="1"{if $metaType} checked="checked"{/if} /></td>
- 			<td width="95%" class="value">
- 				<h4>{fieldLabel name="metaType" key="manager.setup.typeMethodApproach"}</h4>
- 			</td>
- 		</tr>
- 		<tr valign="top">
- 			<td>&nbsp;</td>
- 			<td class="value">
- 				<span class="instruct">{translate key="manager.setup.typeProvideExamples"}:</span>
- 				<br />
- 				<input type="text" name="metaTypeExamples[{$formLocale|escape}]" id="metaTypeExamples" value="{$metaTypeExamples[$formLocale]|escape}" size="60" class="textField" />
- 				<br />
- 				<span class="instruct">{translate key="manager.setup.typeExamples"}</span>
- 			</td>
- 		</tr>
- 		
- 	</div>
+ 	</div> <!--#forAuthorsToIndexTheirWork-->
 
  	<hr>
 
@@ -381,7 +362,7 @@
  		<p>{translate key="manager.setup.registerJournalForIndexingDescription" oaiUrl=$oaiUrl siteUrl=$baseUrl}</p>
  	</div>
 
- 	<div class="separator"></div>
+ 	<hr>
 
  	<div id="notifications">
  		<h3>3.6 {translate key="manager.setup.notifications"}</h3>
@@ -407,7 +388,7 @@
  		</table>
  	</div>
 
- 	<div class="separator"></div>
+ 	<hr>
 
  	<div id="citationAssistant">
  		<h3>3.7 {translate key="manager.setup.citationAssistant"}</h3>
@@ -511,9 +492,9 @@
  	{/if}
  </div>
 
- <div class="separator"></div>
+ <hr>
 
- <p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="setup" escape=false}'" /></p>
+ <p><input type="submit" value="{translate key="common.saveAndContinue"}" class="btn btn-primary" /> <input type="button" value="{translate key="common.cancel"}" class="btn btn-warning" onclick="document.location.href='{url op="setup" escape=false}'" /></p>
 
  <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
