@@ -227,7 +227,7 @@
 
  		<h4>{translate key="manager.setup.competingInterests.guidelines"}</h4>
  		<div class="form-group journal-setup">
- 		<textarea name="competingInterestGuidelines[{$formLocale|escape}]" id="competingInterestGuidelines" rows="12" cols="60" class="form-control">{$competingInterestGuidelines[$formLocale]|escape}</textarea>
+ 			<textarea name="competingInterestGuidelines[{$formLocale|escape}]" id="competingInterestGuidelines" rows="12" cols="60" class="form-control">{$competingInterestGuidelines[$formLocale]|escape}</textarea>
  		</div>
  	</div>
 
@@ -238,148 +238,141 @@
 
  		<p>{translate key="manager.setup.forAuthorsToIndexTheirWorkDescription"}</p>
 
- 		<table width="100%" class="data">
- 			<tr valign="top">
- 				<td width="5%" class="label" valign="bottom"><input type="checkbox" name="metaDiscipline" id="metaDiscipline" value="1"{if $metaDiscipline} checked="checked"{/if} /></td>
- 				<td width="95%" class="value">
- 					<h4>{fieldLabel name="metaDiscipline" key="manager.setup.discipline"}</h4>
- 				</td>
- 			</tr>
- 			<tr valign="top">
- 				<td>&nbsp;</td>
- 				<td class="value">
- 					<span class="instruct">{translate key="manager.setup.disciplineDescription"}</span><br/>
- 					<span class="instruct">{translate key="manager.setup.disciplineProvideExamples"}:</span>
- 					<br />
- 					<input type="text" name="metaDisciplineExamples[{$formLocale|escape}]" id="metaDisciplineExamples" value="{$metaDisciplineExamples[$formLocale]|escape}" size="60" class="textField" />
- 					<br />
- 					<span class="instruct">{translate key="manager.setup.disciplineExamples"}</span>
- 				</td>
- 			</tr>
+ 		
+ 		<div class="form-group">
+ 			<div class="checkbox">
+ 				<label for="metaDiscipline">
+ 					<h4>
+ 						<input type="checkbox" name="metaDiscipline" id="metaDiscipline" value="1"{if $metaDiscipline} checked="checked"{/if} /> 
+ 						{translate key="manager.setup.discipline"}
+ 						<small class="help-block">{translate key="manager.setup.disciplineDescription"}</small>
+ 					</h4>
+ 				</label>
 
- 			<tr>
- 				<td class="separator" colspan="2"><br />&nbsp;</td>
- 			</tr>
+ 				<div class="form-group">
+ 					<p class="instruct">{translate key="manager.setup.disciplineProvideExamples"}:</p>
+ 					<input type="text" name="metaDisciplineExamples[{$formLocale|escape}]" id="metaDisciplineExamples" value="{$metaDisciplineExamples[$formLocale]|escape}" size="60" class="form-control" placeholder='{translate key="manager.setup.disciplineExamples"}'> 							
+ 				</div>
+ 				
+ 			</div>
 
- 			<tr valign="top">
- 				<td width="5%" class="label" valign="bottom"><input type="checkbox" name="metaSubjectClass" id="metaSubjectClass" value="1"{if $metaSubjectClass} checked="checked"{/if} /></td>
- 				<td width="95%" class="value">
- 					<h4>{fieldLabel name="metaSubjectClass" key="manager.setup.subjectClassification"}</h4>
- 				</td>
- 			</tr>
- 			<tr valign="top">
- 				<td>&nbsp;</td>
- 				<td class="value">
- 					<table width="100%">
- 						<tr valign="top">
- 							<td width="10%">{fieldLabel name="metaSubjectClassTitle" key="common.title"}</td>
- 							<td width="90%"><input type="text" name="metaSubjectClassTitle[{$formLocale|escape}]" id="metaSubjectClassTitle" value="{$metaSubjectClassTitle[$formLocale]|escape}" size="40" class="textField" /></td>
- 						</tr>
- 						<tr valign="top">
- 							<td width="10%">{fieldLabel name="metaSubjectClassUrl" key="common.url"}</td>
- 							<td width="90%"><input type="text" name="metaSubjectClassUrl[{$formLocale|escape}]" id="metaSubjectClassUrl" value="{$metaSubjectClassUrl[$formLocale]|escape}" size="40" class="textField" /></td>
- 						</tr>
- 					</table>
- 					<span class="instruct">{translate key="manager.setup.subjectClassificationExamples"}</span>
- 				</td>
- 			</tr>
+ 		</div> <!--.form-group-->
 
- 			<tr>
- 				<td class="separator" colspan="2"><br />&nbsp;</td>
- 			</tr>
+ 		<hr>
 
- 			<tr valign="top">
- 				<td width="5%" class="label" valign="bottom"><input type="checkbox" name="metaSubject" id="metaSubject" value="1"{if $metaSubject} checked="checked"{/if} /></td>
- 				<td width="95%" class="value">
- 					<h4>{fieldLabel name="metaSubject" key="manager.setup.subjectKeywordTopic"}</h4>
- 				</td>
- 			</tr>
- 			<tr valign="top">
- 				<td>&nbsp;</td>
- 				<td class="value">
- 					<span class="instruct">{translate key="manager.setup.subjectProvideExamples"}:</span>
- 					<br />
- 					<input type="text" name="metaSubjectExamples[{$formLocale|escape}]" id="metaSubjectExamples" value="{$metaSubjectExamples[$formLocale]|escape}" size="60" class="textField" />
- 					<br />
- 					<span class="instruct">{translate key="manager.setup.subjectExamples"}</span>
- 				</td>
- 			</tr>
+ 		<div class="form-group">
+ 			<div class="checkbox">
+ 				<label for="metaSubjectClass">
+ 					<h4>
+ 						<input type="checkbox" name="metaSubjectClass" id="metaSubjectClass" value="1"{if $metaSubjectClass} checked="checked"{/if} />
+ 						{translate key="manager.setup.subjectClassification"}
+ 					</h4>
 
- 			<tr>
- 				<td class="separator" colspan="2"><br />&nbsp;</td>
- 			</tr>
+ 				</label>
+ 				<div class="form-horizontal">
+ 					<div class="form-group">
+ 						{fieldLabel name="metaSubjectClassTitle" key="common.title" class="col-sm-1 control-label text-left"}
+ 						<div class="col-sm-11">
+ 							<input type="text" name="metaSubjectClassTitle[{$formLocale|escape}]" id="metaSubjectClassTitle" value="{$metaSubjectClassTitle[$formLocale]|escape}" size="40" class="form-control" placeholder='{translate key="manager.setup.subjectClassificationExamples"}'/>
+ 						</div>
+ 					</div>
+ 					<div class="form-group">
+ 						{fieldLabel name="metaSubjectClassUrl" key="common.url" class="col-sm-1 control-label text-left"}
+ 						<div class="col-sm-11">
+ 							<input type="text" name="metaSubjectClassUrl[{$formLocale|escape}]" id="metaSubjectClassUrl" value="{$metaSubjectClassUrl[$formLocale]|escape}" size="40" class="form-control">
+ 						</div>
+ 					</div>
+ 				</div> <!--.form-horizontal-->
+ 			</div>
+ 		</div>
+ 		
+ 		<hr>
 
- 			<tr valign="top">
- 				<td width="5%" class="label" valign="bottom"><input type="checkbox" name="metaCoverage" id="metaCoverage" value="1"{if $metaCoverage} checked="checked"{/if} /></td>
- 				<td width="95%" class="value">
- 					<h4>{fieldLabel name="metaCoverage" key="manager.setup.coverage"}</h4>
- 				</td>
- 			</tr>
- 			<tr>
- 				<td class="separator" colspan="2">&nbsp;</td>
- 			</tr>
- 			<tr valign="top">
- 				<td>&nbsp;</td>
- 				<td class="value">
- 					<span class="instruct">{translate key="manager.setup.coverageDescription"}</span><br/>
- 					<span class="instruct">{translate key="manager.setup.coverageGeoProvideExamples"}:</span>
- 					<br />
- 					<input type="text" name="metaCoverageGeoExamples[{$formLocale|escape}]" id="metaCoverageGeoExamples" value="{$metaCoverageGeoExamples[$formLocale]|escape}" size="60" class="textField" />
- 					<br />
- 					<span class="instruct">{translate key="manager.setup.coverageGeoExamples"}</span>
- 				</td>
- 			</tr>
- 			<tr>
- 				<td class="separator" colspan="2">&nbsp;</td>
- 			</tr>
- 			<tr valign="top">
- 				<td>&nbsp;</td>
- 				<td class="value">
- 					<span class="instruct">{translate key="manager.setup.coverageChronProvideExamples"}:</span>
- 					<br />
- 					<input type="text" name="metaCoverageChronExamples[{$formLocale|escape}]" id="metaCoverageChronExamples" value="{$metaCoverageChronExamples[$formLocale]|escape}" size="60" class="textField" />
- 					<br />
- 					<span class="instruct">{translate key="manager.setup.coverageChronExamples"}</span>
- 				</td>
- 			</tr>
- 			<tr>
- 				<td class="separator" colspan="2">&nbsp;</td>
- 			</tr>
- 			<tr valign="top">
- 				<td>&nbsp;</td>
- 				<td class="value">
- 					<span class="instruct">{translate key="manager.setup.coverageResearchSampleProvideExamples"}:</span>
- 					<br />
- 					<input type="text" name="metaCoverageResearchSampleExamples[{$formLocale|escape}]" id="metaCoverageResearchSampleExamples" value="{$metaCoverageResearchSampleExamples[$formLocale]|escape}" size="60" class="textField" />
- 					<br />
- 					<span class="instruct">{translate key="manager.setup.coverageResearchSampleExamples"}</span>
- 				</td>
- 			</tr>
+ 		<div class="form-group">
+ 			<div class="checkbox">
+ 				<label for="metaSubject">
+ 					<h4>
+ 						<input type="checkbox" name="metaSubject" id="metaSubject" value="1"{if $metaSubject} checked="checked"{/if} />
+ 						{translate key="manager.setup.subjectKeywordTopic"}
+ 					</h4>
 
- 			<tr>
- 				<td class="separator" colspan="2"><br />&nbsp;</td>
- 			</tr>
+ 				</label>
 
- 			<tr valign="top">
- 				<td width="5%" class="label" valign="bottom"><input type="checkbox" name="metaType" id="metaType" value="1"{if $metaType} checked="checked"{/if} /></td>
- 				<td width="95%" class="value">
- 					<h4>{fieldLabel name="metaType" key="manager.setup.typeMethodApproach"}</h4>
- 				</td>
- 			</tr>
- 			<tr valign="top">
- 				<td>&nbsp;</td>
- 				<td class="value">
- 					<span class="instruct">{translate key="manager.setup.typeProvideExamples"}:</span>
- 					<br />
- 					<input type="text" name="metaTypeExamples[{$formLocale|escape}]" id="metaTypeExamples" value="{$metaTypeExamples[$formLocale]|escape}" size="60" class="textField" />
- 					<br />
- 					<span class="instruct">{translate key="manager.setup.typeExamples"}</span>
- 				</td>
- 			</tr>
- 		</table>
+ 				<div class="form-group">
+ 					<p class="instruct">{translate key="manager.setup.subjectProvideExamples"}:</p>
+ 					<input type="text" name="metaSubjectExamples[{$formLocale|escape}]" id="metaSubjectExamples" value="{$metaSubjectExamples[$formLocale]|escape}" size="60" class="form-control" placeholder='{translate key="manager.setup.subjectExamples"}'/>
+ 				</div>
+ 			</div>
+ 		</div> <!--.form-group-->
+
+ 		<hr>
+
+ 		<div class="form-group">
+ 			<div class="checkbox">
+ 				<label for="metaCoverage">
+ 					<h4>
+ 					<input type="checkbox" name="metaCoverage" id="metaCoverage" value="1"{if $metaCoverage} checked="checked"{/if} />
+ 					{translate key="manager.setup.coverage"} 
+ 					<small class="help-block">{translate key="manager.setup.coverageDescription"}</small>						
+ 					</h4>
+ 				</label>
+ 			</div>
+ 			<div class="form-group">
+ 				<p class="instruct">{translate key="manager.setup.coverageGeoProvideExamples"}:</p>
+ 				<input type="text" name="metaCoverageGeoExamples[{$formLocale|escape}]" id="metaCoverageGeoExamples" value="{$metaCoverageGeoExamples[$formLocale]|escape}" size="60" class="form-control" placeholder='{translate key="manager.setup.coverageGeoExamples"}'/>
+ 			</div>
+ 		</div> <!--.form-group-->
+
+ 		<hr>
+ 		
+ 		<tr valign="top">
+ 			<td>&nbsp;</td>
+ 			<td class="value">
+ 				<span class="instruct">{translate key="manager.setup.coverageChronProvideExamples"}:</span>
+ 				<br />
+ 				<input type="text" name="metaCoverageChronExamples[{$formLocale|escape}]" id="metaCoverageChronExamples" value="{$metaCoverageChronExamples[$formLocale]|escape}" size="60" class="textField" />
+ 				<br />
+ 				<span class="instruct">{translate key="manager.setup.coverageChronExamples"}</span>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td class="separator" colspan="2">&nbsp;</td>
+ 		</tr>
+ 		<tr valign="top">
+ 			<td>&nbsp;</td>
+ 			<td class="value">
+ 				<span class="instruct">{translate key="manager.setup.coverageResearchSampleProvideExamples"}:</span>
+ 				<br />
+ 				<input type="text" name="metaCoverageResearchSampleExamples[{$formLocale|escape}]" id="metaCoverageResearchSampleExamples" value="{$metaCoverageResearchSampleExamples[$formLocale]|escape}" size="60" class="textField" />
+ 				<br />
+ 				<span class="instruct">{translate key="manager.setup.coverageResearchSampleExamples"}</span>
+ 			</td>
+ 		</tr>
+
+ 		<tr>
+ 			<td class="separator" colspan="2"><br />&nbsp;</td>
+ 		</tr>
+
+ 		<tr valign="top">
+ 			<td width="5%" class="label" valign="bottom"><input type="checkbox" name="metaType" id="metaType" value="1"{if $metaType} checked="checked"{/if} /></td>
+ 			<td width="95%" class="value">
+ 				<h4>{fieldLabel name="metaType" key="manager.setup.typeMethodApproach"}</h4>
+ 			</td>
+ 		</tr>
+ 		<tr valign="top">
+ 			<td>&nbsp;</td>
+ 			<td class="value">
+ 				<span class="instruct">{translate key="manager.setup.typeProvideExamples"}:</span>
+ 				<br />
+ 				<input type="text" name="metaTypeExamples[{$formLocale|escape}]" id="metaTypeExamples" value="{$metaTypeExamples[$formLocale]|escape}" size="60" class="textField" />
+ 				<br />
+ 				<span class="instruct">{translate key="manager.setup.typeExamples"}</span>
+ 			</td>
+ 		</tr>
+ 		
  	</div>
 
- 	<div class="separator"></div>
+ 	<hr>
 
  	<div id="registerJournalForIndexing">
  		<h3>3.5 {translate key="manager.setup.registerJournalForIndexing"}</h3>
