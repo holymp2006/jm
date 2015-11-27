@@ -38,3 +38,6 @@
 
 /locale/en_US/locale.xml
 /locale/en_US/default.xml
+
+\locale\en_US\manager.xml
+\lib\pkp\locale\en_US\manager.xml
