@@ -118,11 +118,14 @@ a:active {
 	margin-bottom: 0;
 }
 /*spacing*/
+.mt-10 {
+	margin-top: 10px !important;
+}
 .mt-15 {
-	margin-top: 15px;
+	margin-top: 15px !important;
 }
 .mt-20 {
-	margin-top: 20px;
+	margin-top: 20px !important;
 }
 /*misc*/
 .checkbox .control-label {
