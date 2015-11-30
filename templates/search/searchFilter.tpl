@@ -22,22 +22,24 @@
 	{assign var="isEmptyFilter" value=0}
 {/if}
 {if ($displayIf == "emptyFilter" && $isEmptyFilter) || ($displayIf == "activeFilter" && !$isEmptyFilter)}
-	<tr>
-		<td class="label">
-			<label for="{$filterName}">{translate key=$key}</label>
-		</td>
-		<td class="value">
+<div class="form-group">
+		<label for="{$filterName}" class="col-sm-3 control-label">{translate key=$key}</label> 
+		
 			{if $filterType == "date"}
-				{html_select_date prefix=$filterName time=$filterValue all_extra="class=\"selectMenu\"" year_empty="" month_empty="" day_empty="" start_year="$startYear" end_year="$endYear"}
-				{if $filterName == "dateTo"}
-					<input type="hidden" name="dateToHour" value="23" />
-					<input type="hidden" name="dateToMinute" value="59" />
-					<input type="hidden" name="dateToSecond" value="59" />
-				{/if}
+			<div class="col-sm-6">
+				<div class="form-inline">
+					{html_select_date prefix=$filterName time=$filterValue all_extra="class=\"selectMenu\"" year_empty="" month_empty="" day_empty="" start_year="$startYear" end_year="$endYear"}
+					{if $filterName == "dateTo"}
+						<input type="hidden" name="dateToHour" value="23" />
+						<input type="hidden" name="dateToMinute" value="59" />
+						<input type="hidden" name="dateToSecond" value="59" />
+					{/if}
+				</div>
+			</div>
 			{else}
 				{capture assign="filterInput"}{call_hook name="Templates::Search::SearchResults::FilterInput" filterName=$filterName filterValue=$filterValue}{/capture}
 				{if empty($filterInput)}
-					<input type="text" name="{$filterName}" id="{$filterName}" size="40" maxlength="255" value="{$filterValue|escape}" class="textField" />
+					<input type="text" name="{$filterName}" id="{$filterName}" size="40" maxlength="255" value="{$filterValue|escape}" class="form-control" />
 				{else}
 					{$filterInput}
 				{/if}
@@ -76,6 +78,6 @@
 					{assign var=$filterName value=$filterValue}
 				{/if}
 			{/if}
-		</td>
-	</tr>
+
+</div>
 {/if}

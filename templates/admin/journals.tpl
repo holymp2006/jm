@@ -21,19 +21,18 @@ $(document).ready(function() { setupTableDND("#adminJournals", "moveJournal"); }
 <br />
 
 <div id="journals">
-<table width="100%" class="listing" id="adminJournals">
-	<tr>
-		<td colspan="4" class="headseparator">&nbsp;</td>
-	</tr>
+<table width="100%" class="table table-striped" id="adminJournals">
+
+	<thead>
 	<tr valign="top" class="heading">
-		<td width="35%">{translate key="manager.setup.journalTitle"}</td>
-		<td width="35%">{translate key="journal.path"}</td>
-		<td width="10%">{translate key="common.order"}</td>
-		<td width="20%" align="right">{translate key="common.action"}</td>
+		<th width="35%">{translate key="manager.setup.journalTitle"}</th>
+		<th width="35%">{translate key="journal.path"}</th>
+		<th width="10%">{translate key="common.order"}</th>
+		<th width="20%" align="right">{translate key="common.action"}</th>
 	</tr>
-	<tr>
-		<td colspan="4" class="headseparator">&nbsp;</td>
-	</tr>
+	</thead>
+	
+	<tbody>
 	{iterate from=journals item=journal}
 	<tr valign="top" id="journal-{$journal->getId()}" class="data">
 		<td><a class="action" href="{url journal=$journal->getPath() page="manager"}">{$journal->getLocalizedTitle()|escape}</a></td>
@@ -58,9 +57,10 @@ $(document).ready(function() { setupTableDND("#adminJournals", "moveJournal"); }
 			<td colspan="2" align="right">{page_links anchor="journals" name="journals" iterator=$journals}</td>
 		</tr>
 	{/if}
+	</tbody>
 </table>
 </div>
-<p><a href="{url op="createJournal"}" class="action">{translate key="admin.journals.create"}</a></p>
+<a href="{url op="createJournal"}" class="action btn btn-primary">{translate key="admin.journals.create"}</a>
 
 {include file="common/footer.tpl"}
 
