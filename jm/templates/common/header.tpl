@@ -143,10 +143,11 @@
 	{*  bootstrap js start *}
 	<script type="text/javascript" src="{$baseUrl}/public/assets/js/bootstrap.min.js"></script>
 	{*  bootstrap js end *}
-
+	
+	<!--Sam CSS/JS -->
 	<script type="text/javascript" src="{$baseUrl}/public/assets/js/jm.js"></script>
-
 	<link rel="stylesheet" href="{$baseUrl}/public/assets/css/jm.css" type="text/css" />
+	
 </head>
 <body id="pkp-{$pageTitle|replace:'.':'-'}">
 
@@ -154,7 +155,7 @@
 <div id="header" class="jumbotron masthead">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-9">
+			<div class="col-md-10">
 					<a id="headerTitle" href="{url page="index"}">
 						<h1>
 						{if $displayPageHeaderLogo && is_array($displayPageHeaderLogo)}
@@ -175,12 +176,12 @@
 					</a>
 					<p>Journal Managers is committed to providing and discriminating World-Class Information Globally</p>
 			</div>
-			<div class="col-md-3">	
+			<div class="col-md-2">	
 					<ul class="social-icons list-inline">
-						<li><a class="fa fa-facebook btn btn-primary"></a></li>
-						<li><a class="fa fa-twitter btn btn-primary"></a></li>	
-						<li><a class="fa fa-google btn btn-primary"></a></li>	
-						<li><a class="fa fa-rss btn btn-primary"></a></li> 
+						<li><a class="fa fa-facebook"></a></li>
+						<li><a class="fa fa-twitter"></a></li>	
+						<li><a class="fa fa-google"></a></li>	
+						<li><a class="fa fa-rss"></a></li> 
 					</ul>
 					<div class="clearfix clear"></div>
 			</div>
@@ -196,7 +197,7 @@
 
 {*sidebar now in footer*}
 
-<div id="main" class="col-md-9">
+<div id="main" class="col-md-9 cont">
 
 {include file="common/breadcrumbs.tpl"}
 
@@ -208,4 +209,3 @@
 {/if}
 
 <div id="content">
-
