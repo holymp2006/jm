@@ -2,49 +2,23 @@
  * templates/common/footer.tpl
  *
  * Copyright (c) 2013-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Common site footer.
  *
  *}
-{if $displayCreativeCommons}
-	{translate key="common.ccLicense"}
+{strip}
+{if $pageFooter==''}
+	{if $currentJournal && $currentJournal->getSetting('onlineIssn')}
+		{assign var=issn value=$currentJournal->getSetting('onlineIssn')}
+	{elseif $currentJournal && $currentJournal->getSetting('printIssn')}
+		{assign var=issn value=$currentJournal->getSetting('printIssn')}
+	{/if}
+	{if $issn}
+		{translate|assign:"issnText" key="journal.issn"}
+		{assign var=pageFooter value="$issnText: $issn"}
+	{/if}
 {/if}
-{if $pageFooter}
-	<br /><br />
-	<div id="pageFooter">{$pageFooter}</div>
-{/if}
-{call_hook name="Templates::Common::Footer::PageFooter"}
-</div><!-- content -->
-</div><!-- main -->
-
-{call_hook|assign:"leftSidebarCode" name="Templates::Common::LeftSidebar"}
-{call_hook|assign:"rightSidebarCode" name="Templates::Common::RightSidebar"}
-
-{if $leftSidebarCode || $rightSidebarCode}
-	<div id="sidebar" class="col-md-3">
-		{* {if $leftSidebarCode}
-			<div id="leftSidebar">
-				{$leftSidebarCode}
-			</div>
-		{/if}  *}
-		{if $rightSidebarCode}
-			<div id="rightSidebar">
-				{$rightSidebarCode}
-			</div>
-		{/if}
-	</div>
-{/if}
-
-
-</div><!-- .row -->
-
-</div><!-- body -->
-
-{get_debug_info}
-{if $enableDebugStats}{include file=$pqpTemplate}{/if}
-
-<!-- </div> --><!-- container -->
-</body>
-</html>
+{include file="core:common/footer.tpl"}
+{/strip}

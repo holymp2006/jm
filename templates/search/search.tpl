@@ -19,39 +19,31 @@
 			$('#searchForm').pkpHandler('$.pkp.pages.search.SearchFormHandler');
 		{rdelim});
 	</script>
-	<form method="post" id="searchForm" action="{url op="search"}" class="form">
-
-		<div class="form-inline">
-				 <div class="form-group">
-					<label class="sr-only label" for="query">{translate key="search.searchAllCategories"}</label>
-				
+	<form method="post" id="searchForm" action="{url op="search"}">
+		<table class="data">
+			<tr valign="top">
+				<td class="label"><label for="query">{translate key="search.searchAllCategories"}</label></td>
+				<td class="value">
 					{capture assign="queryFilter"}{call_hook name="Templates::Search::SearchResults::FilterInput" filterName="query" filterValue=$query}{/capture}
 					{if empty($queryFilter)}
-						<input type="text" id="query" name="query" size="40" maxlength="255" value="{$query|escape}" class="form-control" placeholder="Enter search item">
-			
+						<input type="text" id="query" name="query" size="40" maxlength="255" value="{$query|escape}" class="textField" />
 					{else}
 						{$queryFilter}
 					{/if}
-				</div> <!--.form-group-->
-
-				{if $siteSearch}
-					<div class="form-group">
-						<label class="sr-only label" for="searchJournal">{translate key="search.withinJournal"}</label>
-						<select name="searchJournal" id="searchJournal" class="form-control">{html_options options=$journalOptions selected=$searchJournal}</select>
-					</div>					
-				{/if}
-
-					<div class="form-group">
-						<input type="submit" value="{translate key="common.search"}" class="btn btn-primary">
-					</div>
-		</div> <!--.form-inline-->
-
-		
+					&nbsp;
+					<input type="submit" value="{translate key="common.search"}" class="button defaultButton" />
+				</td>
+			</tr>
+			{if $siteSearch}
+				<tr valign="top">
+					<td class="label"><label for="searchJournal">{translate key="search.withinJournal"}</label></td>
+					<td class="value"><select name="searchJournal" id="searchJournal" class="selectMenu">{html_options options=$journalOptions selected=$searchJournal}</select></td>
+				</tr>
+			{/if}
 			{if $hasActiveFilters}
-
-			<div class="form-horizontal">
-
-			<h4 class="section-header">{translate key="search.activeFilters"}</h4>
+				<tr valign="top">
+					<td colspan="2" class="label"><h4>{translate key="search.activeFilters"}</h4></td>
+				</tr>
 				{include file="search/searchFilter.tpl" displayIf="activeFilter" filterName="authors" filterValue=$authors key="search.author"}
 				{include file="search/searchFilter.tpl" displayIf="activeFilter" filterName="title" filterValue=$title key="article.title"}
 				{include file="search/searchFilter.tpl" displayIf="activeFilter" filterName="abstract" filterValue=$abstract key="search.abstract"}
@@ -64,53 +56,41 @@
 				{include file="search/searchFilter.tpl" displayIf="activeFilter" filterName="type" filterValue=$type key="search.typeMethodApproach"}
 				{include file="search/searchFilter.tpl" displayIf="activeFilter" filterName="coverage" filterValue=$coverage key="search.coverage"}
 				{include file="search/searchFilter.tpl" displayIf="activeFilter" filterName="indexTerms" filterValue=$indexTerms key="search.indexTermsLong"}
-			
-			</div><!--.form-horizontal-->
 			{/if}
-
+		</table>
 		<br/>
 		{if $hasEmptyFilters}
 			{capture assign="emptyFilters"}
-			<div class="form-horizontal">
-
+				<table class="data">
 					{if empty($authors) || empty($title) || empty($abstract) || empty($galleyFullText) || empty($suppFiles)}
-						<h4 class="section-header">{translate key="search.searchCategories"}</h4>
-
+						<tr valign="top">
+							<td colspan="2" class="label"><h4>{translate key="search.searchCategories"}</h4></td>
+						</tr>
 						{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterName="authors" filterValue=$authors key="search.author"}
 						{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterName="title" filterValue=$title key="article.title"}
 						{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterName="abstract" filterValue=$abstract key="search.abstract"}
 						{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterName="galleyFullText" filterValue=$galleyFullText key="search.fullText"}
 						{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterName="suppFiles" filterValue=$suppFiles key="article.suppFiles"}
 					{/if}
-
-
 					{if $dateFrom == '--' || $dateTo == '--'}
-
-						<h4 class="section-header">{translate key="search.date"}</h4>
-
+						<tr valign="top">
+							<td colspan="2" class="formSubLabel"><h4>{translate key="search.date"}</h4></td>
+						</tr>
 						{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterType="date" filterName="dateFrom" filterValue=$dateFrom startYear=$startYear endYear=$endYear key="search.dateFrom"}
-
-
 						{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterType="date" filterName="dateTo" filterValue=$dateTo startYear=$startYear endYear=$endYear key="search.dateTo"}
-
 					{/if}
-
-
 					{if empty($discipline) || empty($subject) || empty($type) || empty($coverage)}
-						<h4 class="section-header">{translate key="search.indexTerms"}</h4>
-
+						<tr valign="top">
+							<td colspan="2" class="label"><h4>{translate key="search.indexTerms"}</h4></td>
+						</tr>
 						{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterName="discipline" filterValue=$discipline key="search.discipline"}
 						{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterName="subject" filterValue=$subject key="search.subject"}
 						{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterName="type" filterValue=$type key="search.typeMethodApproach"}
 						{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterName="coverage" filterValue=$coverage key="search.coverage"}
 						{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterName="indexTerms" filterValue=$indexTerms key="search.indexTermsLong"}
 					{/if}
-			</div> <!--.form-horizontal-->
-				 
-				<div class="form-group">
-					<input type="submit" value="{translate key="common.search"}" class="btn btn-primary">
-				</div>
-
+				</table>
+				<p><input type="submit" value="{translate key="common.search"}" class="button defaultButton" /></p>
 			{/capture}
 			{include file="controllers/extrasOnDemand.tpl" id="emptyFilters" moreDetailsText="search.advancedSearchMore" lessDetailsText="search.advancedSearchLess" extraContent=$emptyFilters}
 		{/if}
@@ -127,16 +107,15 @@
 {/if}
 
 <div id="results">
-	<table width="" class="table table-striped">
-		<thead>
-			<tr class="heading" valign="bottom">
-				{if !$currentJournal}<th width="20%">{translate key="journal.journal"}</th>{/if}
-				<th width="{if !$currentJournal}20%{else}40%{/if}">{translate key="issue.issue"}</th>
-				<th width="60%" colspan="2">{translate key="article.title"}</th>
-			</tr>
-		</thead>
-		
-		<tbody>
+	<table width="100%" class="listing">
+		<tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
+		<tr class="heading" valign="bottom">
+			{if !$currentJournal}<td width="20%">{translate key="journal.journal"}</td>{/if}
+			<td width="{if !$currentJournal}20%{else}40%{/if}">{translate key="issue.issue"}</td>
+			<td width="60%" colspan="2">{translate key="article.title"}</td>
+		</tr>
+		<tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
+
 		{iterate from=results item=result}
 			{assign var=publishedArticle value=$result.publishedArticle}
 			{assign var=article value=$result.article}
@@ -205,7 +184,6 @@
 				<td colspan="2" align="right">{page_links anchor="results" iterator=$results name="search" query=$query searchJournal=$searchJournal authors=$authors title=$title abstract=$abstract galleyFullText=$galleyFullText suppFiles=$suppFiles discipline=$discipline subject=$subject type=$type coverage=$coverage indexTerms=$indexTerms dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear orderBy=$orderBy orderDir=$orderDir}</td>
 			</tr>
 		{/if}
-		</tbody>
 	</table>
 
 	{capture assign="syntaxInstructions"}{call_hook name="Templates::Search::SearchResults::SyntaxInstructions"}{/capture}
