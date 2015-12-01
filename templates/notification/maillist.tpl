@@ -8,94 +8,81 @@
  * Displays the notification settings page and unchecks  
  *
  *}
- {strip}
- {assign var="pageTitle" value="notification.mailList"}
- {include file="common/header.tpl"}
- {/strip}
+{strip}
+{assign var="pageTitle" value="notification.mailList"}
+{include file="common/header.tpl"}
+{/strip}
 
- <p><span class="instruct">{translate key="notification.mailListDescription"}</span></p>
+<p><span class="instruct">{translate key="notification.mailListDescription"}</span></p>
 
- {if $isError}
- <div class="alert alert-danger">
- 	<span class="formError">{translate key="form.errorsOccurred"}:</span>
- 	<ul class="formErrorList">
- 		{foreach key=field item=message from=$errors}
- 		<li>{$message}</li>
- 		{/foreach}
- 	</ul>
- </div>
- {/if}
+{if $isError}
+<p>
+	<span class="formError">{translate key="form.errorsOccurred"}:</span>
+	<ul class="formErrorList">
+	{foreach key=field item=message from=$errors}
+			<li>{$message}</li>
+	{/foreach}
+	</ul>
+</p>
+{/if}
 
- {if $success}
- <div class="alert alert-success"><span class="formSuccess">{translate key="$success"}</span></div>
- {/if}
+{if $success}
+	<p><span class="formSuccess">{translate key="$success"}</span></p>
+{/if}
 
- <form id="notificationSettings" method="post" action="{url op="saveSubscribeMailList"}">
+<form id="notificationSettings" method="post" action="{url op="saveSubscribeMailList"}">
 
- 	<div class="form-horizontal">
- 		<div class="form-group">
- 			{fieldLabel name="email" key="user.email" class="control-label col-sm-2"}
- 			<div class="col-sm-10"><input type="text" id="email" name="email" size="30" maxlength="90" class="form-control" /></div>
- 		</div>
- 		<div class="form-group">
- 			{fieldLabel name="confirmEmail" key="user.confirmEmail" class="control-label col-sm-2"}
- 			<div class="col-sm-10">
- 				<input type="text" id="confirmEmail" name="confirmEmail" size="30" maxlength="90" class="form-control" />
- 			</div>
- 		</div>
- 		{if $captchaEnabled && $reCaptchaHtml}
- 		<div class="form-group">
- 			{fieldLabel name="recaptcha_challenge_field" required="true" key="common.captchaField" class="control-label col-sm-2"}
- 			<div class="col-sm-10">
- 				{$reCaptchaHtml}
- 			</div>
- 		</div>
- 		{elseif $captchaEnabled}
- 		<div class="form-group">
- 			{fieldLabel name="captcha" required="true" key="common.captchaField" class="control-label col-sm-2"}
- 			<div class="col-sm-10">
- 				<img src="{url page="user" op="viewCaptcha" path=$captchaId}" alt="{translate key="common.captchaField.altText"}" /><br />
- 				<span class="instruct">{translate key="common.captchaField.description"}</span><br />
- 				<input name="captcha" id="captcha" value="" size="20" maxlength="32" class="form-control" />
- 				<input type="hidden" name="captchaId" value="{$captchaId|escape:"quoted"}" />
- 			</div>
- 		</div>
- 		{/if}{* $captchaEnabled *}
- 		<div class="form-group"> 
- 			<div class="col-sm-10 col-sm-offset-2">			
- 				<input type="submit" value="{translate key="form.submit"}" class="btn btn-primary" />
- 			</div>
- 		</div>
- 	</div>
- </form>
+<table class="data" width="100%">
+	<tr valign="top">
+		<td class="label" width="5%">{fieldLabel name="email" key="user.email"}</td>
+		<td class="value" width="45%"><input type="text" id="email" name="email" size="30" maxlength="90" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td class="label" width="5%">{fieldLabel name="confirmEmail" key="user.confirmEmail"}</td>
+		<td class="value" width="45%"><input type="text" id="confirmEmail" name="confirmEmail" size="30" maxlength="90" class="textField" /></td>
+	</tr>
+	{if $captchaEnabled && $reCaptchaHtml}
+	<tr>
+		<td class="label" valign="top">{fieldLabel name="recaptcha_challenge_field" required="true" key="common.captchaField"}</td>
+		<td class="value">
+			{$reCaptchaHtml}
+		</td>
+	</tr>
+	{elseif $captchaEnabled}
+	<tr>
+		<td class="label" valign="top">{fieldLabel name="captcha" required="true" key="common.captchaField"}</td>
+		<td class="value">
+			<img src="{url page="user" op="viewCaptcha" path=$captchaId}" alt="{translate key="common.captchaField.altText"}" /><br />
+			<span class="instruct">{translate key="common.captchaField.description"}</span><br />
+			<input name="captcha" id="captcha" value="" size="20" maxlength="32" class="textField" />
+			<input type="hidden" name="captchaId" value="{$captchaId|escape:"quoted"}" />
+		</td>
+	</tr>
+	{/if}{* $captchaEnabled *}
+	<tr valign="top">
+		<td width="5%">&nbsp;</td>
+		<td><p><input type="submit" value="{translate key="form.submit"}" class="button defaultButton" /></p></td>
+	</tr>
+</table>
+</form>
+<h5 style="margin-left:10%">{translate key="notification.mailList.register"}</h5>
+<ul style="margin-left:10%">
+	{if $settings.allowRegReviewer}
+		{url|assign:"url" page="user" op="register"}
+		<li>{translate key="notification.mailList.review" reviewUrl=$url} </li>
+	{/if}
+	{if $settings.allowRegAuthor}
+		{url|assign:"url" page="information" op="authors"}
+		<li>{translate key="notification.mailList.submit" submitUrl=$url} </li>
+	{/if}
+	{if $settings.subscriptionsEnabled}
+		{url|assign:"url" page="user" op="register"}
+		<li>{translate key="notification.mailList.protectedContent" subscribeUrl=$url}
+	{/if}
+<li><a href="{url page="about" op="submissions" anchor="privacyStatement"}">{translate key="about.privacyStatement"}</a></li>
+</ul>
 
- <div class="form-horizontal">
- 	<div class="form-group">
- 		<div class="col-sm-10 col-sm-offset-2">
+</form>
 
- 			<h5>{translate key="notification.mailList.register"}</h5>
- 			<ul>
- 				{if $settings.allowRegReviewer}
- 				{url|assign:"url" page="user" op="register"}
- 				<li>{translate key="notification.mailList.review" reviewUrl=$url} </li>
- 				{/if}
- 				{if $settings.allowRegAuthor}
- 				{url|assign:"url" page="information" op="authors"}
- 				<li>{translate key="notification.mailList.submit" submitUrl=$url} </li>
- 				{/if}
- 				{if $settings.subscriptionsEnabled}
- 				{url|assign:"url" page="user" op="register"}
- 				<li>{translate key="notification.mailList.protectedContent" subscribeUrl=$url}
- 					{/if}
- 					<li><a href="{url page="about" op="submissions" anchor="privacyStatement"}">{translate key="about.privacyStatement"}</a></li>
- 				</ul>
-
- 				
- 			</div>
- 		</div>
- 	</div>
- 	
- </form>
-
- {include file="common/footer.tpl"}
+{include file="common/footer.tpl"}
 
