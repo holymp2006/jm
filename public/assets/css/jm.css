@@ -1,0 +1,248 @@
+/**
+*jm.css
+*Author: Sam
+**/
+
+/**modding default styles**/
+/*#main*/
+#body {
+
+}
+#main {
+	padding: 0;
+	margin-left: 0;
+}
+#main .page-title {
+	font-family: 'Open Sans', sans-serif;
+	padding-top: 0;
+	margin: 0;
+	border-bottom: none;
+}
+
+/*a*/
+a:hover {
+	background: transparent;
+} 
+
+/*#navbar*/
+#navbar {
+	border-bottom: none; 
+}
+
+/*#header*/
+#header h1 {
+	font-family: 'Open Sans', sans-serif;
+	padding: 0;
+
+}
+#content {
+	border-top: none; 
+	font-size: 14px; 
+}
+/**modding default styles end**/
+
+
+/**modding bootstrap**/
+.container {
+	max-width: 970px !important;
+}
+.jumbotron {
+	margin-bottom: 0;
+}
+.nav-tabs.nav-stacked > li > a {
+	border: 1px solid #ddd;
+}
+.nav-tabs > li > a { 
+    border-radius: 0; 
+}
+.nav-tabs.nav-stacked > li:first-child > a {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.nav-tabs.nav-stacked > li:last-child > a {
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+.nav-stacked > li + li {
+    margin-top: 0;
+}
+.nav-tabs {
+    border-bottom: none;
+}
+.text-left {
+	text-align: left !important;
+}
+/**modding bootstrap end**/
+
+
+/*main styling*/
+
+/*body*/
+body {
+	font-family: 'Open Sans', sans-serif;	
+}
+
+a:hover,
+a:focus,
+a:visited,
+a:active {
+	text-decoration: none !important;
+} 
+#navbar > .container {
+	padding-left: 0;
+}
+.control-group .controls {
+	font-size: 14px;
+}
+#searchForm .form-horizontal .control-label {
+    text-align: left;
+}
+.section-header {
+	border-bottom: 1px solid #eee;
+    margin: 30px 0 20px;
+    padding-bottom: 6px;
+}
+
+/*search*/
+#results {
+	margin-top: 25px;
+}
+
+#focusAndScopeDescription,
+.journal-setup {
+	padding-right: 2px;
+}
+
+/*#setupForm .alerts*/
+#setupForm .alert {
+	margin-bottom: 0;
+}
+/*spacing*/
+.mt-15 {
+	margin-top: 15px;
+}
+.mt-20 {
+	margin-top: 20px;
+}
+
+/*main styling end*/
+
+
+
+/****local Open Sans font*****/
+@font-face {
+	font-family: 'Open Sans';
+	src:url('../fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype'),
+	url("../fonts/Open_Sans/OpenSans-Regular.eot") format('embedded-opentype'); /* EOT file for IE */
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	font-weight: bold;
+	src:url('../fonts/Open_Sans/OpenSans-Bold.ttf') format('truetype'),
+	url("../fonts/Open_Sans/OpenSans-Bold.eot") format('embedded-opentype'); /* EOT file for IE */
+}
+
+@font-face {
+	font-family: 'Open Sans-Light';
+	src:url('../fonts/Open_Sans/OpenSans-Light.ttf') format('truetype'),
+	url("../fonts/Open_Sans/OpenSans-Light.eot") format('embedded-opentype'); /* EOT file for IE */
+}
+/****end Open Sans font*****/
+
+
+/** Styling Navigation Bar Begins **/
+.nav1 {
+  background: #fff;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+}
+
+nav {
+  position: absolute;
+  bottom: 0;
+  height: 52px;
+  width: 100%;
+  background: #fff;
+}
+
+.goToTop {
+  position: fixed;
+  top: 0;
+  height: 52px;
+  z-index: 1;
+} 
+/**Styling Navigation Bar Ends **/
+
+
+
+
+
+
+
+/* ----------------------------------------------------------------
+	Footer
+-----------------------------------------------------------------*/
+
+
+.footer {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.footer_top {
+	margin-top: 2%;
+	color: #63b557;
+	font-size: 20px;
+	font-weight: 300;	
+}
+
+.well {
+	margin-bottom: 0px;
+}
+
+.text {
+	color: #FFF;
+}
+
+.counter {
+    font-size: 42px;
+    font-weight: 600;
+    /*font-family: "Raleway",sans-serif;*/
+}
+
+.counter.counter-small {
+    font-size: 28px;
+}
+
+.dark {
+	background-color: #333;
+	position: relative;
+	padding-top: 10px;
+	padding-bottom: 10px;	
+	border-top: 5px solid rgba(0,0,0,0.2);
+}
+
+.social {
+	display: inline-block;
+	cursor: pointer;
+	background-color: #33383B;
+	border-radius: 2px;
+	font-size: 20px;
+	color: #FFF;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 3px;
+	margin-bottom: 5px;	
+}
+
+.social-item {
+	width: 35px;
+	height: 20px;
+	padding: 0px;
+	margin: 0px;	
+}
+
+.about-us {
+	font-size: 10px;
+	font-style: italic;
+}
