@@ -46,7 +46,7 @@
 
 <!-- </div> --><!-- container -->
 
-<footer  class="footer">
+<footer  class="footer row">
 	
 	<div class="footer_top well well-lg">
 		<div class="container">
