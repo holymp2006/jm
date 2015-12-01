@@ -8,7 +8,9 @@
 	* Navigation Bar
 	*
 	*}
-	<div id="navbar" class="collapse navbar-collapse">
+	
+<nav class="navbar nav1" role="navigation">
+	<div id="navbar">
 		<div class="container">
 			<ul class="menu nav navbar-nav">
 				<li id="home"><a href="{url page="index"}">{translate key="navigation.home"}</a></li>
@@ -17,7 +19,6 @@
 				{if $siteCategoriesEnabled}
 				<li id="categories"><a href="{url journal="index" page="search" op="categories"}">{translate key="navigation.categories"}</a></li>
 				{/if}{* $categoriesEnabled *}
-
 
 				{if $currentJournal && $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
 				<li id="current"><a href="{url page="issue" op="current"}">{translate key="navigation.current"}</a></li>
@@ -47,10 +48,10 @@
 				{/if}
 				{/if}{* $isUserLoggedIn *}
 
-
 				{if !$currentJournal || $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
 				<li id="search"><a href="{url page="search"}">{translate key="navigation.search"}</a></li>
 				{/if}
 			</ul>
 		</div>
 	</div>
+</nav>
