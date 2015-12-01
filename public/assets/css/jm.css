@@ -133,9 +133,12 @@ a:active {
 .mb-15 {
 	margin-bottom: 15px;
 }
+<<<<<<< HEAD
 .pl-15 {
 	padding-left: 15px;
 }
+=======
+>>>>>>> 5996827742d9893c3ff5d4db45464aa41352646b
 /*misc*/
 .checkbox .control-label {
 	padding-left: 35px;
