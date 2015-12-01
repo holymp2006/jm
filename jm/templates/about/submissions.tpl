@@ -41,13 +41,14 @@
 	</div>
 {/if}
 
-<div class="separator">&nbsp;</div>
+<hr>
 
 {if $currentJournal->getLocalizedSetting('authorGuidelines') != ''}
 <div id="authorGuidelines"><h3>{translate key="about.authorGuidelines"}</h3>
 <p>{$currentJournal->getLocalizedSetting('authorGuidelines')|nl2br}</p>
 
-<div class="separator">&nbsp;</div>
+<hr>
+
 </div>
 {/if}
 
@@ -59,7 +60,7 @@
 			<li>{$checklistItem.content|nl2br}</li>
 		{/foreach}
 	</ol>
-	<div class="separator">&nbsp;</div>
+	<hr>
 	</div>
 {/if}{* $submissionChecklist *}
 
@@ -67,14 +68,15 @@
 <div id="copyrightNotice"><h3>{translate key="about.copyrightNotice"}</h3>
 <p>{$currentJournal->getLocalizedSetting('copyrightNotice')|nl2br}</p>
 
-<div class="separator">&nbsp;</div>
+<hr>
+
 </div>
 {/if}
 
 {if $currentJournal->getLocalizedSetting('privacyStatement') != ''}<div id="privacyStatement"><h3>{translate key="about.privacyStatement"}</h3>
 <p>{$currentJournal->getLocalizedSetting('privacyStatement')|nl2br}</p>
 
-<div class="separator">&nbsp;</div>
+<hr>
 </div>
 {/if}
 
