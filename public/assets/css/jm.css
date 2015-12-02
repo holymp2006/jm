@@ -72,6 +72,12 @@ a:hover {
 .text-left {
 	text-align: left !important;
 }
+.navbar-brand {
+	padding: 0;
+}
+.navbar-brand > img {
+	height: 100%;
+}
 /**modding bootstrap end**/
 
 
@@ -172,17 +178,17 @@ ul li {
 
 /**Nav Menu**/
 .profile-img{
-    margin-right: 5px;
-    float: left;
-    background: url(../images/placeholder1.jpg) 50% 50% no-repeat; /* 50% 50% centers image in div */
-    background-size: auto 100%; /* Interchange this value depending on prefering width vs. height */
-    width: 20px;
-    height: 20px;
+	margin-right: 5px;
+	float: left;
+	background: url(../images/placeholder1.jpg) 50% 50% no-repeat; /* 50% 50% centers image in div */
+	background-size: auto 100%; /* Interchange this value depending on prefering width vs. height */
+	width: 20px;
+	height: 20px;
 }
 /**little hack**/
 .navbar-nav .navbar-form #simpleQueryAutocomplete {
 	padding: 0;
-    width: 100%;
+	width: 100%;
 }
 /*main styling end*/
 /*******Everything Sam ends*******/
@@ -195,8 +201,8 @@ ul li {
 /*******Everything Abdul starts*******/
 /** Styling Navigation Bar Begins **/
 .nav1 {
-  background: #fff;
-  box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+	background: #fff;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.4);
 }
 
 nav {
@@ -208,10 +214,10 @@ nav {
 }
 
 .goToTop {
-  position: fixed;
-  top: 0;
-  height: 52px;
-  z-index: 1;
+	position: fixed;
+	top: 0;
+	height: 52px;
+	z-index: 1;
 }
 /**Styling Navigation Bar Ends **/
 
@@ -223,98 +229,98 @@ nav {
 
 /* ----------------------------------------------------------------
 	Footer
------------------------------------------------------------------*/
+	-----------------------------------------------------------------*/
 
 
-.footer {
-	padding-top: 10px;
-	/**padding-bottom: 10px; I removed the padding here**/
-}
+	.footer {
+		padding-top: 10px;
+		/**padding-bottom: 10px; I removed the padding here**/
+	}
 
-.footer_top {
-	margin-top: 2%;
-	color: #63b557;
-	font-size: 20px;
-	font-weight: 300;	
-}
+	.footer_top {
+		margin-top: 2%;
+		color: #63b557;
+		font-size: 20px;
+		font-weight: 300;	
+	}
 
-.well {
-	margin-bottom: 0px;
-}
+	.well {
+		margin-bottom: 0px;
+	}
 
-.text {
-	color: #FFF;
-}
+	.text {
+		color: #FFF;
+	}
 
-.counter {
-    font-size: 42px;
-    font-weight: 600;
-    /*font-family: "Raleway",sans-serif;*/
-}
+	.counter {
+		font-size: 42px;
+		font-weight: 600;
+		/*font-family: "Raleway",sans-serif;*/
+	}
 
-.counter.counter-small {
-    font-size: 28px;
-}
+	.counter.counter-small {
+		font-size: 28px;
+	}
 
-.dark {
-	background-color: #333;
-	position: relative;
-	padding-top: 10px;
-	padding-bottom: 10px;	
-	border-top: 5px solid rgba(0,0,0,0.2);
-}
+	.dark {
+		background-color: #333;
+		position: relative;
+		padding-top: 10px;
+		padding-bottom: 10px;	
+		border-top: 5px solid rgba(0,0,0,0.2);
+	}
 
-.social {
-	display: inline-block;
-	cursor: pointer;
-	background-color: #33383B;
-	border-radius: 2px;
-	font-size: 20px;
-	color: #FFF;
-	text-align: center;
-	line-height: 35px;
-	margin-right: 3px;
-	margin-bottom: 5px;	
-}
+	.social {
+		display: inline-block;
+		cursor: pointer;
+		background-color: #33383B;
+		border-radius: 2px;
+		font-size: 20px;
+		color: #FFF;
+		text-align: center;
+		line-height: 35px;
+		margin-right: 3px;
+		margin-bottom: 5px;	
+	}
 
-.social-item {
-	width: 35px;
-	height: 20px;
-	padding: 0px;
-	margin: 0px;	
-}
+	.social-item {
+		width: 35px;
+		height: 20px;
+		padding: 0px;
+		margin: 0px;	
+	}
 
-.about-us {
-	font-size: 10px;
-	font-style: italic;
-}
-
-
-
-/*******Everything Abdul ends*******/
+	.about-us {
+		font-size: 10px;
+		font-style: italic;
+	}
 
 
 
+	/*******Everything Abdul ends*******/
 
 
 
-/****local Open Sans font*****/
-@font-face {
-	font-family: 'Open Sans';
-	src:url('../fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype'),
-	url("../fonts/Open_Sans/OpenSans-Regular.eot") format('embedded-opentype'); /* EOT file for IE */
-}
 
-@font-face {
-	font-family: 'Open Sans';
-	font-weight: bold;
-	src:url('../fonts/Open_Sans/OpenSans-Bold.ttf') format('truetype'),
-	url("../fonts/Open_Sans/OpenSans-Bold.eot") format('embedded-opentype'); /* EOT file for IE */
-}
 
-@font-face {
-	font-family: 'Open Sans-Light';
-	src:url('../fonts/Open_Sans/OpenSans-Light.ttf') format('truetype'),
-	url("../fonts/Open_Sans/OpenSans-Light.eot") format('embedded-opentype'); /* EOT file for IE */
-}
+
+	/****local Open Sans font*****/
+	@font-face {
+		font-family: 'Open Sans';
+		src:url('../fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype'),
+		url("../fonts/Open_Sans/OpenSans-Regular.eot") format('embedded-opentype'); /* EOT file for IE */
+	}
+
+	@font-face {
+		font-family: 'Open Sans';
+		font-weight: bold;
+		src:url('../fonts/Open_Sans/OpenSans-Bold.ttf') format('truetype'),
+		url("../fonts/Open_Sans/OpenSans-Bold.eot") format('embedded-opentype'); /* EOT file for IE */
+	}
+
+	@font-face {
+		font-family: 'Open Sans-Light';
+		src:url('../fonts/Open_Sans/OpenSans-Light.ttf') format('truetype'),
+		url("../fonts/Open_Sans/OpenSans-Light.eot") format('embedded-opentype'); /* EOT file for IE */
+	}
 /****end Open Sans font*****/

@@ -378,12 +378,12 @@ ul.menu {
 	padding: 0;
 }
 
-ul.menu li {
+/**ul.menu li {
 	margin: 0;
 	padding: 0;
 	padding-right: 1.5em;
 	display: inline;
-}
+}**/
 
 ul.menu li.current {
 	font-weight: bold;
