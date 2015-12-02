@@ -41,3 +41,5 @@
 
 \locale\en_US\manager.xml
 \lib\pkp\locale\en_US\manager.xml
+\lib\pkp\styles\common.css
+\plugins\blocks\*

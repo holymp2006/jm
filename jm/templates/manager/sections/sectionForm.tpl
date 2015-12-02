@@ -101,15 +101,9 @@
 		</div>
 		{call_hook name="Templates::Manager::Sections::SectionForm::AdditionalMetadata" sectionId=$sectionId}
 		<div class="form-group">
-<<<<<<< HEAD
 			{fieldLabel suppressId="true" key="submission.indexing" class="col-sm-2 text-right"}
 			<div class="col-sm-10">
 				<p>{translate key="manager.section.submissionsToThisSection"}</p>
-=======
-			{fieldLabel suppressId="true" key="submission.indexing" class="col-sm-2 control-label"}
-			<div class="col-sm-10">
-				<p>{translate key="manager.section.submissionsToThisSection"}</p><br/>
->>>>>>> 5996827742d9893c3ff5d4db45464aa41352646b
 				<div class="checkbox">
 					<label for="metaReviewed">				
 						<input type="checkbox" name="metaReviewed" id="metaReviewed" value="1" {if $metaReviewed}checked="checked"{/if} />
@@ -118,17 +112,12 @@
 				</div>
 				<div class="checkbox">
 					<label for="abstractsNotRequired">
-<<<<<<< HEAD
 						<input type="checkbox" name="abstractsNotRequired" id="abstractsNotRequired" value="1" {if $abstractsNotRequired}checked="checked"{/if} />
-=======
-						<input type="checkbox" name="abstractsNotRequired" id="abstractsNotRequired" value="1" {if $abstractsNotRequired}checked="checked"{/if} />&nbsp;
->>>>>>> 5996827742d9893c3ff5d4db45464aa41352646b
 						{translate key="manager.sections.abstractsNotRequired"}
 					</label>					
 				</div>
 				<div class="checkbox">
 					<label for="metaIndexed">
-<<<<<<< HEAD
 						<input type="checkbox" name="metaIndexed" id="metaIndexed" value="1" {if $metaIndexed}checked="checked"{/if} />
 						{translate key="manager.sections.submissionIndexing"}
 					</label>														
@@ -209,70 +198,6 @@
 				</div>
 			</div>
 		</div>
-=======
-						<input type="checkbox" name="metaIndexed" id="metaIndexed" value="1" {if $metaIndexed}checked="checked"{/if} />&nbsp;
-						{translate key="manager.sections.submissionIndexing"}
-					</label>														
-				</div>
-				<div class="form-inline">
-					<div class="form-group">
-						{fieldLabel name="identifyType" key="manager.sections.identifyType"}
-						<input type="text" name="identifyType[{$formLocale|escape}]" id="identifyType" value="{$identifyType[$formLocale]|escape}" size="20" maxlength="60" class="form-control" placeholder='{translate key="manager.sections.identifyTypeExamples"}'/>
-					</div>
-				</div> <!--.form-inline-->
-			</div>
-		</div>
-
-		<tr valign="top">
-			<td class="value">
-				{fieldLabel name="identifyType" key="manager.sections.identifyType"} <input type="text" name="identifyType[{$formLocale|escape}]" id="identifyType" value="{$identifyType[$formLocale]|escape}" size="20" maxlength="60" class="textField" />
-				<br />
-				<span class="instruct">{translate key="manager.sections.identifyTypeExamples"}</span>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td class="label">{fieldLabel suppressId="true" key="submission.restrictions"}</td>
-			<td class="value">
-				<input type="checkbox" name="editorRestriction" id="editorRestriction" value="1" {if $editorRestriction}checked="checked"{/if} />
-				{fieldLabel name="editorRestriction" key="manager.sections.editorRestriction"}
-			</td>
-		</tr>
-		<tr valign="top">
-			<td class="label">{fieldLabel key="manager.sections.wordCount"}</td>
-			<td class="value">
-				{fieldLabel name="wordCount" key="manager.sections.wordCountInstructions"}&nbsp;&nbsp;<input type="text" name="wordCount" id="abbrev" value="{$wordCount}" size="10" maxlength="20" class="textField" />
-			</td>
-		</tr>
-		<tr valign="top">
-			<td class="label">{fieldLabel name="hideTitle" key="issue.toc"}</td>
-			<td class="value">
-				<input type="checkbox" name="hideTitle" id="hideTitle" value="1" {if $hideTitle}checked="checked"{/if} />
-				{fieldLabel name="hideTitle" key="manager.sections.hideTocTitle"}
-			</td>
-		</tr>
-		<tr valign="top">
-			<td class="label">&nbsp;</td>
-			<td class="value">
-				<input type="checkbox" name="hideAuthor" id="hideAuthor" value="1" {if $hideAuthor}checked="checked"{/if} />
-				{fieldLabel name="hideAuthor" key="manager.sections.hideTocAuthor"}
-			</td>
-		</tr>
-		<tr valign="top">
-			<td class="label">{fieldLabel name="hideAbout" key="navigation.about"}</td>
-			<td class="value">
-				<input type="checkbox" name="hideAbout" id="hideAbout" value="1" {if $hideAbout}checked="checked"{/if} />
-				{fieldLabel name="hideAbout" key="manager.sections.hideAbout"}
-			</td>
-		</tr>
-		{if $commentsEnabled}
-		<tr valign="top">
-			<td class="label">{fieldLabel name="disableComments" key="comments.readerComments"}</td>
-			<td class="value">
-				<input type="checkbox" name="disableComments" id="disableComments" value="1" {if $disableComments}checked="checked"{/if} />
-				{fieldLabel name="disableComments" key="manager.sections.disableComments"}
-			</td>
-		</tr>
->>>>>>> 5996827742d9893c3ff5d4db45464aa41352646b
 		{/if}
 	</div>
 </div>
@@ -285,7 +210,6 @@
 	<p><span class="instruct">{translate key="manager.section.sectionEditorInstructions"}</span></p>
 	<h4>{translate key="manager.sections.unassigned"}</h4>
 
-<<<<<<< HEAD
 	<table class="table table-striped" id="unassignedSectionEditors">
 
 		<thead>
@@ -311,36 +235,6 @@
 			{/foreach}
 
 		</tbody>
-=======
-	<table width="100%" class="listing" id="unassignedSectionEditors">
-		<tr>
-			<td colspan="3" class="headseparator">&nbsp;</td>
-		</tr>
-		<tr valign="top" class="heading">
-			<td width="20%">{translate key="user.username"}</td>
-			<td width="60%">{translate key="user.name"}</td>
-			<td width="20%" align="right">{translate key="common.action"}</td>
-		</tr>
-		<tr>
-			<td colspan="3" class="headseparator">&nbsp;</td>
-		</tr>
-		{foreach from=$unassignedEditors item=editor}
-		<tr valign="top">
-			<td>{$editor->getUsername()|escape}</td>
-			<td>{$editor->getFullName()|escape}</td>
-			<td align="right">
-				<a class="action" href="javascript:addSectionEditor({$editor->getId()})">{translate key="common.add"}</a>
-			</td>
-		</tr>
-		{foreachelse}
-		<tr>
-			<td colspan="3" class="nodata">{translate key="common.none"}</td>
-		</tr>
-		{/foreach}
-		<tr>
-			<td colspan="3" class="endseparator">&nbsp;</td>
-		</tr>
->>>>>>> 5996827742d9893c3ff5d4db45464aa41352646b
 	</table>
 </div>
 
@@ -349,7 +243,6 @@
 <div id="sectionsAssigned">
 	<h4>{translate key="manager.sections.assigned"}</h4>
 
-<<<<<<< HEAD
 	<table class="table table-striped" id="assignedSectionEditors">
 		<thead>
 			<tr valign="top" class="heading">
@@ -382,42 +275,6 @@
 
 
 		</tbody>
-=======
-	<table width="100%" class="listing" id="assignedSectionEditors">
-		<tr>
-			<td colspan="5" class="headseparator">&nbsp;</td>
-		</tr>
-		<tr valign="top" class="heading">
-			<td width="20%">{translate key="user.username"}</td>
-			<td width="40%">{translate key="user.name"}</td>
-			<td width="10%" align="center">{translate key="submission.review"}</td>
-			<td width="10%" align="center">{translate key="submission.editing"}</td>
-			<td width="20%" align="right">{translate key="common.action"}</td>
-		</tr>
-		<tr>
-			<td colspan="5" class="headseparator">&nbsp;</td>
-		</tr>
-		{foreach from=$assignedEditors item=editorEntry}
-		{assign var=editor value=$editorEntry.user}
-		<input type="hidden" name="assignedEditorIds[]" value="{$editor->getId()|escape}" />
-		<tr valign="top">
-			<td>{$editor->getUsername()|escape}</td>
-			<td>{$editor->getFullName()|escape}</td>
-			<td align="center"><input type="checkbox" {if $editorEntry.canReview}checked="checked"{/if} name="canReview{$editor->getId()}" /></td>
-			<td align="center"><input type="checkbox" {if $editorEntry.canEdit}checked="checked"{/if} name="canEdit{$editor->getId()}" /></td>
-			<td align="right">
-				<a class="action" href="javascript:removeSectionEditor({$editor->getId()})">{translate key="common.remove"}</a>
-			</td>
-		</tr>
-		{foreachelse}
-		<tr>
-			<td colspan="5" class="nodata">{translate key="common.none"}</td>
-		</tr>
-		{/foreach}
-		<tr>
-			<td colspan="5" class="endseparator">&nbsp;</td>
-		</tr>
->>>>>>> 5996827742d9893c3ff5d4db45464aa41352646b
 	</table>
 </div>
 

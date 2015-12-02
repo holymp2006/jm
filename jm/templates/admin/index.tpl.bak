@@ -13,9 +13,9 @@
 {include file="common/header.tpl"}
 {/strip}
 
-{** {if $newVersionAvailable}
+{if $newVersionAvailable}
 <div class="warningMessage">{translate key="site.upgradeAvailable.admin" currentVersion=$currentVersion latestVersion=$latestVersion}</div>
-{/if} **}
+{/if}
 
 <div id="siteManagement">
 <h3 class="list-group-item active"><span><i class="glyphicon glyphicon-check"></i>&nbsp;</span>{translate key="admin.siteManagement"}</h3>
