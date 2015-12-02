@@ -26,7 +26,7 @@ a:hover {
 
 /*#navbar*/
 #navbar {
-	border-bottom: none; 
+	/**border-bottom: none;**/ 
 }
 
 /*#header*/
@@ -169,6 +169,21 @@ ul li {
 .image-preview-input-title {
 	margin-left:2px;
 }
+
+/**Nav Menu**/
+.profile-img{
+    margin-right: 5px;
+    float: left;
+    background: url(../images/placeholder1.jpg) 50% 50% no-repeat; /* 50% 50% centers image in div */
+    background-size: auto 100%; /* Interchange this value depending on prefering width vs. height */
+    width: 20px;
+    height: 20px;
+}
+/**little hack**/
+.navbar-nav .navbar-form #simpleQueryAutocomplete {
+	padding: 0;
+    width: 100%;
+}
 /*main styling end*/
 /*******Everything Sam ends*******/
 
@@ -185,10 +200,10 @@ ul li {
 }
 
 nav {
-  position: absolute;
+ /** position: absolute;
   bottom: 0;
   height: 52px;
-  width: 100%;
+  width: 100%; **/
   background: #fff;
 }
 
@@ -197,7 +212,7 @@ nav {
   top: 0;
   height: 52px;
   z-index: 1;
-} 
+}
 /**Styling Navigation Bar Ends **/
 
 
@@ -213,7 +228,7 @@ nav {
 
 .footer {
 	padding-top: 10px;
-	padding-bottom: 10px;
+	/**padding-bottom: 10px; I removed the padding here**/
 }
 
 .footer_top {

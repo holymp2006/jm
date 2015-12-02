@@ -143,6 +143,8 @@
 	{*  bootstrap js start *}
 	<script type="text/javascript" src="{$baseUrl}/public/assets/js/bootstrap.min.js"></script>
 	{*  bootstrap js end *}
+
+	<script type="text/javascript" src="{$baseUrl}/public/assets/js/bootstrap-hover-dropdown.min.js"></script>
 	
 	<!--Sam CSS/JS -->
 	<script type="text/javascript" src="{$baseUrl}/public/assets/js/jm.js"></script>
