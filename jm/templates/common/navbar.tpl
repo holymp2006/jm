@@ -21,7 +21,7 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a href="" id="logo" class="navbar-brand logo">
-					<img src="" alt="JM logo" class="img-responsive">
+					<img src="{$baseUrl}/public/assets/images/footer-logo.png" alt="JM logo" class="img-responsive">
 				</a>
 			</div> <!-- end #headerlogo -->
 
@@ -67,7 +67,8 @@
 
 
 					{if !$currentJournal || $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
-					<div class="col-sm-3 col-md-3">
+					<li>
+					<div class="col-sm-12 col-md-12">
 						<form class="navbar-form" role="search" method="post"  action="{url page="search" op="search"}">
 
 							{capture assign="filterInput"}{call_hook name="Templates::Search::SearchResults::FilterInput" filterName="simpleQuery" filterValue="" size=8 filterPlaceholder="Search"}{/capture}
@@ -83,19 +84,20 @@
 								</div>
 							</div>
 						</form>
-					</div> 
+					</div>					
+					</li>
 					{/if}
 
 
 					{if $isUserLoggedIn}
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+					<li role="presentation" class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="500" data-close-others="false" href="#" role="button" aria-expanded="false">
 							<div class="img-circle profile-img">
 								<img class="img-responsive img-circle" alt="" src="">
 							</div>
 							{$loggedInUsername|escape}&nbsp;<span class="caret"></span>
 						</a>
-						<ul class="dropdown-menu">
+						<ul class="dropdown-menu" role="menu">
 							{if $hasOtherJournals}
 							<li><a href="{url journal="index" page="user"}">{translate key="plugins.block.user.myJournals"}</a></li>
 							{/if}
