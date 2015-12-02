@@ -28,12 +28,17 @@ a:hover {
 #navbar {
 	/**border-bottom: none;**/ 
 }
-
 /*#header*/
+#header {
+	background-color: #205081;
+	color: rgb(255, 255, 255);
+	box-shadow: rgba(0, 0, 0, 0.247059) 0px 5px 20px -5px inset;
+	border-radius: 0;
+}
 #header h1 {
 	font-family: 'Open Sans', sans-serif;
 	padding: 0;
-
+	color: rgb(255, 255, 255);
 }
 #content {
 	border-top: none; 
@@ -48,6 +53,9 @@ a:hover {
 }
 .jumbotron {
 	margin-bottom: 0;
+}
+.navbar {
+	border-radius: 0;
 }
 .nav-tabs.nav-stacked > li > a {
 	border: 1px solid #ddd;
@@ -77,6 +85,39 @@ a:hover {
 }
 .navbar-brand > img {
 	height: 100%;
+}
+.navbar-default {
+	background-color: #205081;
+	border: none;
+	color: rgb(255, 255, 255);
+	-moz-box-shadow: 0 0 15px 2px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 0 15px 2px rgba(0,0,0,0.3);
+	-o-box-shadow: 0 0 15px 2px rgba(0,0,0,0.3);
+	box-shadow: 0 0 15px 2px rgba(0,0,0,0.3);
+}
+.navbar-default .navbar-nav > li > a {
+	color: #fff;
+	opacity: .7;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:active {
+	color: #fff;
+	opacity: 1.0;
+}
+.navbar-form .input-group .form-control,
+.navbar-form .input-group .input-group-addon,
+.navbar-form .input-group .input-group-btn {
+	background-color: rgba(0, 0, 0, 0.2);
+	border-color: transparent;
+	color: rgba(255, 255, 255, 0.7);
+}
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.open>a:focus, 
+.navbar-default .navbar-nav>.open>a:hover {
+	color: #fff;
+	opacity: 1;
+	background-color: rgba(0, 0, 0, 0.2);
 }
 /**modding bootstrap end**/
 
@@ -152,6 +193,10 @@ a:active {
 ul li {
 	list-style: none;
 }
+.footer .well-lg {
+	border-radius: 0;
+	border-right: 0;
+}
 /*custom upload input-group*/
 .image-preview-input {
 	position: relative;
@@ -184,6 +229,14 @@ ul li {
 	background-size: auto 100%; /* Interchange this value depending on prefering width vs. height */
 	width: 20px;
 	height: 20px;
+}
+nav .navbar-form .btn {
+	background-color: rgba(0, 0, 0, 0.2);
+	border-color:transparent;
+	color: rgba(255, 255, 255, 0.7);
+}
+.navbar-nav > li > .dropdown-menu.bullet {
+    margin-top: 8px;
 }
 /**little hack**/
 .navbar-nav .navbar-form #simpleQueryAutocomplete {

@@ -16,11 +16,11 @@
  {/if}
  {/strip}
  <!DOCTYPE html>
- <html>
- <head lang="en">
+ <html lang="en">
+ <head>
  	<meta charset="UTF-8">
  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
- 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
  	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset|escape}" />
  	<meta name="description" content="{$metaSearchDescription|escape}" />
@@ -78,10 +78,9 @@
 		<!-- Form validation -->
 		<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/validate/jquery.validate.js"></script>
 		<script type="text/javascript">
-			<!--
-		// initialise plugins
-		{literal}
-		$(function(){
+			<!--// initialise plugins -->
+			{literal}
+			; $(function(){
 			jqueryValidatorI18n("{/literal}{$baseUrl}{literal}", "{/literal}{$currentLocale}{literal}"); // include the appropriate validation localization
 			{/literal}{if $validateId}{literal}
 			$("form[name={/literal}{$validateId}{literal}]").validate({
@@ -129,52 +128,59 @@
 	<script type="text/javascript" src="{$baseUrl}/public/assets/js/bootstrap.min.js"></script>
 	{*  bootstrap js end *}
 
+	{*bootstrap-hover-dropdown*}
 	<script type="text/javascript" src="{$baseUrl}/public/assets/js/bootstrap-hover-dropdown.min.js"></script>
+
+	{*dropdowns-enhancement*}
+	<script type="text/javascript" src="{$baseUrl}/public/assets/js/dropdowns-enhancement.js"></script>
+	<link rel="stylesheet" href="{$baseUrl}/public/assets/css/dropdowns-enhancement.css" type="text/css" />
 	
-	<!--Sam CSS/JS -->
+	{*<!--Sam CSS/JS -->*}
 	<script type="text/javascript" src="{$baseUrl}/public/assets/js/jm.js"></script>
 	<link rel="stylesheet" href="{$baseUrl}/public/assets/css/jm.css" type="text/css" />
 	
 </head>
-<body id="pkp-{$pageTitle|replace:'.':'-'}">
+<body id="pkp-{$pageTitle|replace:'.':'-'}" class="container-fluid">
 
 	<!--<div id="container">-->
-	<div id="header" class="jumbotron masthead">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-10">
-					<a id="headerTitle" href="{url page="index"}">
-						<h1>
-							{if $displayPageHeaderLogo && is_array($displayPageHeaderLogo)}
-							<img src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}" width="{$displayPageHeaderLogo.width|escape}" height="{$displayPageHeaderLogo.height|escape}" {if $displayPageHeaderLogoAltText != ''}alt="{$displayPageHeaderLogoAltText|escape}"{else}alt="{translate key="common.pageHeaderLogo.altText"}"{/if} />
-							{/if}
-							{if $displayPageHeaderTitle && is_array($displayPageHeaderTitle)}
-							<img src="{$publicFilesDir}/{$displayPageHeaderTitle.uploadName|escape:"url"}" width="{$displayPageHeaderTitle.width|escape}" height="{$displayPageHeaderTitle.height|escape}" {if $displayPageHeaderTitleAltText != ''}alt="{$displayPageHeaderTitleAltText|escape}"{else}alt="{translate key="common.pageHeader.altText"}"{/if} />
-							{elseif $displayPageHeaderTitle}
-							{$displayPageHeaderTitle}
-							{elseif $alternatePageHeader}
-							{$alternatePageHeader}
-							{elseif $siteTitle}
-							{$siteTitle}
-							{else}
-							{$applicationName}
-							{/if}
-						</h1>
-					</a>
-					<p>Journal Managers is committed to providing and discriminating World-Class Information Globally</p>
+	<header class="row">
+		<div id="header" class="jumbotron masthead">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10">
+						<a id="headerTitle" href="{url page="index"}">
+							<h1>
+								{if $displayPageHeaderLogo && is_array($displayPageHeaderLogo)}
+								<img src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}" width="{$displayPageHeaderLogo.width|escape}" height="{$displayPageHeaderLogo.height|escape}" {if $displayPageHeaderLogoAltText != ''}alt="{$displayPageHeaderLogoAltText|escape}"{else}alt="{translate key="common.pageHeaderLogo.altText"}"{/if} />
+								{/if}
+								{if $displayPageHeaderTitle && is_array($displayPageHeaderTitle)}
+								<img src="{$publicFilesDir}/{$displayPageHeaderTitle.uploadName|escape:"url"}" width="{$displayPageHeaderTitle.width|escape}" height="{$displayPageHeaderTitle.height|escape}" {if $displayPageHeaderTitleAltText != ''}alt="{$displayPageHeaderTitleAltText|escape}"{else}alt="{translate key="common.pageHeader.altText"}"{/if} />
+								{elseif $displayPageHeaderTitle}
+								{$displayPageHeaderTitle}
+								{elseif $alternatePageHeader}
+								{$alternatePageHeader}
+								{elseif $siteTitle}
+								{$siteTitle}
+								{else}
+								{$applicationName}
+								{/if}
+							</h1>
+						</a>
+						<p>Journal Managers is committed to providing and discriminating World-Class Information Globally</p>
+					</div>
+					<div class="col-md-2">	
+						<ul class="social-icons list-inline">
+							<li><a class="fa fa-facebook"></a></li>
+							<li><a class="fa fa-twitter"></a></li>	
+							<li><a class="fa fa-google"></a></li>	
+							<li><a class="fa fa-rss"></a></li> 
+						</ul>
+						<div class="clearfix clear"></div>
+					</div>
 				</div>
-				<div class="col-md-2">	
-					<ul class="social-icons list-inline">
-						<li><a class="fa fa-facebook"></a></li>
-						<li><a class="fa fa-twitter"></a></li>	
-						<li><a class="fa fa-google"></a></li>	
-						<li><a class="fa fa-rss"></a></li> 
-					</ul>
-					<div class="clearfix clear"></div>
-				</div>
-			</div>
-		</div>	{*<!--.container-->*}
-	</div>
+			</div>	{*<!--.container-->*}
+		</div>
+	</header>
 
 	{include file="common/navbar.tpl"}
 
