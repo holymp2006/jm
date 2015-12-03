@@ -587,11 +587,13 @@ function prepBlockFields() {
 
 </div>
 
+<p class="alert alert-info mt-20"><span class="formRequired"><i class="glyphicon glyphicon-exclamation-sign"></i>&nbsp;&nbsp;&nbsp;{translate key="common.requiredField"}</span></p>
+
 <hr>
 
 <p><input type="submit" onclick="prepBlockFields()" value="{translate key="common.saveAndContinue"}" class="btn btn-primary" /> <input type="button" value="{translate key="common.cancel"}" class="btn btn-primary btn-warning" onclick="document.location.href='{url op="setup" escape=false}'" /></p>
 
-<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
+
 
 </form> <!-- end form -->
 
