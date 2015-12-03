@@ -67,7 +67,11 @@
  		<div class="form-group">
  			<div class="col-sm-8"> 	
  				<div class="input-group image-preview">
+<<<<<<< HEAD
  					<input id="" placeholder="" type="text" class="form-control image-preview-filename" disabled="disabled">
+=======
+ 					<input id="image-name" placeholder="" type="text" class="form-control image-preview-filename" disabled="disabled">
+>>>>>>> test
  					<span class="input-group-btn">
  						<div class="btn btn-default image-preview-input"> 
  							<span class="glyphicon glyphicon-folder-open"></span> 
@@ -79,6 +83,7 @@
  						
  					</span>
  				</div>
+<<<<<<< HEAD
  			</div> 
  			<script type="text/javascript" charset="utf-8">
  				{literal}
@@ -90,6 +95,20 @@
  			
  		</div> 	
  	</div>
+=======
+ 			</div>  			
+ 		</div> 	
+ 	</div>
+ 	<script type="text/javascript" charset="utf-8">
+ 		{literal}
+ 		$(function() {
+			//$('#image-name').val() = $('.uploadField').val(); 				
+			var mmm = $('.uploadField').val();
+			alert('hey, javascript now works! please continue with the initial plan.');
+ 				}); 		
+ 		{/literal}
+ 	</script>	
+>>>>>>> test
  </form>
 
  <hr>

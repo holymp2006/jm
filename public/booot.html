@@ -1,0 +1,74 @@
+           <nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+           	<div class="container">
+
+           		<!-- Brand and toggle get grouped for better mobile display -->
+           		<div id="headerlogo" class="navbar-header">
+           			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+           				<span class="sr-only">Toggle navigation</span>
+           				<span class="icon-bar"></span>
+           				<span class="icon-bar"></span>
+           				<span class="icon-bar"></span>
+           			</button>
+           			<a href="<?php echo $homePage ?>" id="logo" class="navbar-brand logo">
+           				<img src="<?php echo $folderStep ?>images/logo.png" alt="UPU logo" class="img-responsive">
+           			</a>
+           		</div> <!-- end #headerlogo -->
+
+           		<!-- Collect the nav links, forms, and other content for toggling -->
+           		<div class="collapse navbar-collapse top-menu">
+           			<ul class="nav navbar-nav navbar-right" role="menu">
+           				<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+           				<li role="presentation" class="dropdown">
+           					<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="500" data-close-others="false" href="#" role="button" aria-expanded="false">
+           						<i class="fa fa-pagelines"></i>About Umuawulu<b class="caret"></b></a>
+           						<ul class="dropdown-menu" role="menu"> 
+           							<li><a tabindex="-1" href="#"><i class="fa fa-users"></i>History</a></li>
+           							<li><a tabindex="-1" href="#"><i class="fa fa-users"></i>People And Culture</a></li>
+           							<li><a tabindex="-1" href="#"><i class="fa fa-bank"></i>U.P.U.</a></li>	
+           							<li><a tabindex="-1" href="#"><i class="fa fa-hand-o-right"></i>Get Direction</a></li>	
+           						</ul> 
+           					</li>  
+           					<ul class="menu nav navbar-nav">
+           						<li id="home"><a href="{url page="index"}">{translate key="navigation.home"}</a></li>
+           						<li id="about"><a href="{url page="about"}">{translate key="navigation.about"}</a></li>
+
+           						{if $siteCategoriesEnabled}
+           						<li id="categories"><a href="{url journal="index" page="search" op="categories"}">{translate key="navigation.categories"}</a></li>
+           						{/if}{* $categoriesEnabled *}
+
+           						{if $currentJournal && $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
+           						<li id="current"><a href="{url page="issue" op="current"}">{translate key="navigation.current"}</a></li>
+           						<li id="archives"><a href="{url page="issue" op="archive"}">{translate key="navigation.archives"}</a></li>
+           						{/if}
+
+           						{if $enableAnnouncements}
+           						<li id="announcements"><a href="{url page="announcement"}">{translate key="announcement.announcements"}</a></li>
+           						{/if}{* enableAnnouncements *}
+
+           						{call_hook name="Templates::Common::Header::Navbar::CurrentJournal"}
+
+           						{foreach from=$navMenuItems item=navItem key=navItemKey}
+           						{if $navItem.url != '' && $navItem.name != ''}
+           						<li class="navItem" id="navItem-{$navItemKey|escape}"><a href="{if $navItem.isAbsolute}{$navItem.url|escape}{else}{$baseUrl}{$navItem.url|escape}{/if}">{if $navItem.isLiteral}{$navItem.name|escape}{else}{translate key=$navItem.name}{/if}</a></li>
+           						{/if}
+           						{/foreach}
+
+           						{if $isUserLoggedIn}
+           						<li id="userHome"><a href="{url journal="index" page="user"}">{translate key="navigation.userHome"}</a></li>
+           						{else}
+           						<li id="login"><a href="{url page="login"}">{translate key="navigation.login"}</a></li>
+           						{if !$hideRegisterLink}
+           						<li id="register"><a href="{url page="user" op="register"}">{translate key="navigation.register"}</a></li>
+           						{/if}
+           						{/if}{* $isUserLoggedIn *}
+
+           						{if !$currentJournal || $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
+           						<li id="search"><a href="{url page="search"}">{translate key="navigation.search"}</a></li>
+           						{/if}
+
+           					</ul>
+           				</div> <!-- end .collapse .navbar-collapse -->
+
+           			</div> <!-- end .container -->
+
+            </nav> <!-- end nav -->
