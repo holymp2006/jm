@@ -58,7 +58,7 @@
 			<br/>
 
 			<div class="form-horizontal">
-			<div class="form-group">
+				<div class="form-group">
 					{fieldLabel name="to" key="email.to" class="control-label col-sm-2"}
 					<div class="col-sm-10">
 						{foreach from=$to item=toAddress}
@@ -107,46 +107,84 @@
 						<input type="submit" name="blankTo" class="btn btn-default" value="{translate key="email.addToRecipient"}"/>
 						<input type="submit" name="blankCc" class="btn btn-default" value="{translate key="email.addCcRecipient"}"/>
 						<input type="submit" name="blankBcc" class="btn btn-default" value="{translate key="email.addBccRecipient"}"/>
+						<hr>
 					</div>
 				</div>
 				{/if}{* $addressFieldsEnabled *}
 
 				{if $attachmentsEnabled}
-				<tr valign="top">
-					<td colspan="2">&nbsp;</td>
-				</tr>
-				<tr valign="top">
-					<td class="label">{translate key="email.attachments"}</td>
-					<td class="value">
+				
+				<div class="form-group">
+					{fieldLabel key="email.attachments" class="col-sm-2 control-label"}
+					<div class="col-sm-10">
 						{assign var=attachmentNum value=1}
 						{foreach from=$persistAttachments item=temporaryFile}
 						{$attachmentNum|escape}.&nbsp;{$temporaryFile->getOriginalFileName()|escape}&nbsp;
 						({$temporaryFile->getNiceFileSize()})&nbsp;
-						<a href="javascript:deleteAttachment({$temporaryFile->getId()})" class="action">{translate key="common.delete"}</a>
+						<a href="javascript:deleteAttachment({$temporaryFile->getId()})" class="btn btn-danger btn-sm">{translate key="common.delete"}</a>
 						<br/>
 						{assign var=attachmentNum value=$attachmentNum+1}
 						{/foreach}
 
 						{if $attachmentNum != 1}<br/>{/if}
 
-						<input type="file" name="newAttachment" class="uploadField" /> <input name="addAttachment" type="submit" class="button" value="{translate key="common.upload"}" />
-					</td>
-				</tr>
+						<div class="row">
+							<div class="col-sm-8"> 	
+								<div class="input-group image-preview">
+									<input id="image-name" placeholder="" type="text" class="form-control image-preview-filename" disabled="disabled">
+									<span class="input-group-btn">
+										<div class="btn btn-default image-preview-input"> 
+											<span class="glyphicon glyphicon-folder-open"></span> 
+											<span class="image-preview-input-title">Browse</span>
+											<input id="image-name-get" type="file" name="newAttachment" class="uploadField" /> 
+										</div>
+										
+										<input name="addAttachment" type="submit" class="btn btn-default btn-labeled" value="{translate key="common.upload"}" />
+
+									</span>
+								</div>
+							</div>  			
+						</div> 
+
+					</div>
+
+					{literal}	
+					<script type="text/javascript">
+						$(document).ready(function($) {
+							$('#image-name-get').change(function() {
+								var filename = $(this).val();
+								var lastIndex = filename.lastIndexOf("\\");
+								if (lastIndex >= 0) {
+									filename = filename.substring(lastIndex + 1);
+								}
+								$('#image-name').val(filename);
+							});
+
+						}(jQuery));
+					</script> 		
+					{/literal}	
+
+				</div>
 				{/if}
-				<tr valign="top">
-					<td colspan="2">&nbsp;</td>
-				</tr>
-				<tr valign="top">
-					<td width="20%" class="label">{fieldLabel name="subject" key="email.subject"}</td>
-					<td width="80%" class="value"><input type="text" id="subject" name="subject" value="{$subject|escape}" size="60" maxlength="120" class="textField" /></td>
-				</tr>
-				<tr valign="top">
-					<td class="label">{fieldLabel name="body" key="email.body"}</td>
-					<td class="value"><textarea name="body" cols="60" rows="15" class="textArea">{$body|escape}</textarea></td>
-				</tr>
+				
+				<div class="form-group">
+					{fieldLabel name="subject" key="email.subject" class="col-sm-2 control-label"}
+					<div class="col-sm-10">
+						<input type="text" id="subject" name="subject" value="{$subject|escape}" size="60" maxlength="120" class="form-control" />
+					</div>
+				</div>
+				<div class="form-group">
+					{fieldLabel name="body" key="email.body" class="col-sm-2 control-label"}
+					<div class="col-sm-10">
+						<textarea name="body" cols="60" rows="15" class="form-control">{$body|escape}</textarea>
+					</div>
+				</div>
 			</div>
 
-			<p><input name="send" type="submit" value="{translate key="email.send"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1)" /></p>
+			<hr>
+
+			<p><input name="send" type="submit" value="{translate key="email.send"}" class="btn btn-primary" />
+			<input type="button" value="{translate key="common.cancel"}" class="btn btn-warning" onclick="history.go(-1)" /></p>
 		</form>
 	</div>
 	{include file="common/footer.tpl"}

@@ -76,7 +76,7 @@
  						<div class="btn btn-default image-preview-input"> 
  							<span class="glyphicon glyphicon-folder-open"></span> 
  							<span class="image-preview-input-title">Browse</span>
- 							<input type="file" size="20" name="file" class="uploadField" multiple>
+ 							<input id="image-name-get" type="file" size="20" name="file" class="uploadField" multiple>
  						</div>
 
  						<input type="submit" value="{translate key="manager.files.uploadFile"}" class="btn btn-default btn-labeled" />
@@ -99,6 +99,7 @@
  			</div>  			
  		</div> 	
  	</div>
+<<<<<<< HEAD
  	<script type="text/javascript" charset="utf-8">
  		{literal}
  		$(function() {
@@ -108,6 +109,25 @@
  				}); 		
  		{/literal}
  	</script>	
+>>>>>>> test
+=======
+ 	{literal}	
+ 	<script type="text/javascript">
+ 		$(document).ready(function($) {
+ 			$('#image-name-get').change(function() {
+ 				var filename = $(this).val();
+ 				var lastIndex = filename.lastIndexOf("\\");
+ 				if (lastIndex >= 0) {
+ 					filename = filename.substring(lastIndex + 1);
+ 				}
+ 				$('#image-name').val(filename);
+ 			});
+			//var mmm = $('#image-name-get').attr('file');
+			//alert(mmm);
+			//$('#image-name').val() = mmm; 				
+		}(jQuery));
+ 	</script> 		
+ 	{/literal}	
 >>>>>>> test
  </form>
 

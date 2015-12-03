@@ -244,7 +244,13 @@ nav .navbar-form .btn {
 	color: rgba(255, 255, 255, 0.7);
 }
 .navbar-nav > li > .dropdown-menu.bullet {
-    margin-top: 8px;
+	margin-top: 8px;
+}
+.dropdown-toggle > i.more {
+	font-size: 10px;
+	margin-left: 5px;
+	position: relative;
+	top: 1px;
 }
 >>>>>>> test
 /**little hack**/

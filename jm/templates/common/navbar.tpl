@@ -30,7 +30,7 @@
 				<ul class="nav navbar-nav navbar-right menu" role="menu">
 					
 					<li role="presentation" class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="500" data-close-others="false" href="#" role="button" aria-expanded="false">About Umuawulu<b class="caret"></b>
+						<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="500" data-close-others="false" href="#" role="button" aria-expanded="false">About Umuawulu<i class="more glyphicon glyphicon-chevron-down"></i>
 						</a>
 <<<<<<< HEAD
 						<ul class="dropdown-menu" role="menu"> 
@@ -99,7 +99,7 @@
 							<div class="img-circle profile-img">
 								<img class="img-responsive img-circle" alt="" src="">
 							</div>
-							{$loggedInUsername|escape}&nbsp;<span class="caret"></span>
+							{$loggedInUsername|escape}<i class="more glyphicon glyphicon-chevron-down"></i>
 						</a>
 <<<<<<< HEAD
 						<ul class="dropdown-menu" role="menu">

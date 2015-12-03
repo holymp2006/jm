@@ -344,11 +344,13 @@
 					<input type="submit" name="addReviewerDatabaseLink" value="{translate key="manager.setup.addReviewerDatabaseLink"}" class="btn btn-primary" />
 				</div>
 			</div>
+
+			<p class="alert alert-info mt-20"><span class="formRequired"><i class="glyphicon glyphicon-exclamation-sign"></i>&nbsp;&nbsp;&nbsp;{translate key="common.requiredField"}</span></p>
+
 			<hr>
 
 			<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="btn btn-primary" /> <input type="button" value="{translate key="common.cancel"}" class="btn btn-warning" onclick="document.location.href='{url op="setup" escape=false}'" /></p>
 
-			<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 		</form>
 
