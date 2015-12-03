@@ -43,3 +43,6 @@
 \lib\pkp\locale\en_US\manager.xml
 \lib\pkp\styles\common.css
 \plugins\blocks\*
+
+\classes\template\TemplateManager.inc.php
+\lib\pkp\classes\template\PKPTemplateManager.inc.php

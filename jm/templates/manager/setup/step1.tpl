@@ -308,7 +308,7 @@
  				</div>
  			</div>
  			{foreach name=contributors from=$contributors key=contributorId item=contributor}
- 			<div valign="top">
+ 			<div class="form-group">
  				{fieldLabel name="contributors-$contributorId-name" key="manager.setup.contributor" class="col-sm-2 control-label"}
  				<div class="col-sm-10"><input type="text" name="contributors[{$contributorId|escape}][name]" id="contributors-{$contributorId|escape}-name" value="{$contributor.name|escape}" size="40" maxlength="90" class="form-control" />{if $smarty.foreach.contributors.total > 1} 
  					<input type="submit" name="delContributor[{$contributorId|escape}]" value="{translate key="common.delete"}" class="btn btn-danger" />

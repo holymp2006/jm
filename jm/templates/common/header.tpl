@@ -46,7 +46,8 @@
  	{*  fontawesome end *}
 
  	<!-- Base Jquery --> 	
- 	<script type="text/javascript" src="{$baseUrl}/public/assets/js/jquery-2.1.4.min.js"></script>
+ 	<script type="text/javascript" src="{$baseUrl}/public/assets/js/jquery-1.11.3.min.js"></script>
+ 	<script type="text/javascript" src="{$baseUrl}/public/assets/js/jquery-migrate-1.2.1.min.js"></script>
  	<script type="text/javascript" src="{$baseUrl}/public/assets/js/jquery-ui.min.js"></script>
 
 
@@ -80,7 +81,7 @@
 		<script type="text/javascript">
 			<!--// initialise plugins -->
 			{literal}
-			; $(function(){
+			$(function(){
 			jqueryValidatorI18n("{/literal}{$baseUrl}{literal}", "{/literal}{$currentLocale}{literal}"); // include the appropriate validation localization
 			{/literal}{if $validateId}{literal}
 			$("form[name={/literal}{$validateId}{literal}]").validate({
@@ -132,7 +133,7 @@
 	<script type="text/javascript" src="{$baseUrl}/public/assets/js/bootstrap-hover-dropdown.min.js"></script>
 
 	{*dropdowns-enhancement*}
-	<script type="text/javascript" src="{$baseUrl}/public/assets/js/dropdowns-enhancement.js"></script>
+	<!-- <script type="text/javascript" src="{$baseUrl}/public/assets/js/dropdowns-enhancement.js"></script> -->
 	<link rel="stylesheet" href="{$baseUrl}/public/assets/css/dropdowns-enhancement.css" type="text/css" />
 	
 	{*<!--Sam CSS/JS -->*}
