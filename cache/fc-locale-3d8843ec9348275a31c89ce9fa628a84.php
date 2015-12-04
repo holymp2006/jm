@@ -1,0 +1,16 @@
+<?php return array (
+  'plugins.generic.addCssJs.displayName' => 'Add new CSS Stylesheets and/or Javascript libraries',
+  'plugins.generic.addCssJs.description' => 'Allows to add external CSS and JS libraries as FontAwesome or Bootstrap to head and/or after pageFooter div. You can also add custom CSS stylesheets or Javascript files uploaded to your server.',
+  'plugins.generic.addCssJs.settings' => 'Configuration',
+  'plugins.generic.addCssJs.settings.saved' => 'Settings saved for Add new CSS Stylesheets and/or Javascript libraries Plugin',
+  'plugins.generic.addCssJs.importantNotice' => 'All this CSS and JS added will be included at the end of the "head" Html tag. They will follow the order inserted in these fields, overwriting previous files. This could lead to some JS or CSS conflicts.',
+  'plugins.generic.addCssJs.addCssURL' => 'Add the external CSS Stylesheets URLs',
+  'plugins.generic.addCssJs.addCssURLDetails' => 'If more than one URL is added, separate them with commas. Example: To include Font Awesome and Twitter Bootstrap: //maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css, https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css',
+  'plugins.generic.addCssJs.addJsURL' => 'Add the external JS URLs',
+  'plugins.generic.addCssJs.addJsURLDetails' => 'If more than one URL is added, separate them with commas. Example: To include Modernizr y Twitter Bootstrap: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js, http://s.codepen.io/assets/libs/modernizr.js',
+  'plugins.generic.addCssJs.addJsURLFooter' => 'Add JS URLs that will be included in the footer',
+  'plugins.generic.addCssJs.addJsURLFooterDetails' => 'Add here the JS that will be included in the footer',
+  'plugins.generic.addCssJs.installedCss' => 'Currently installed CSS Stylesheets',
+  'plugins.generic.addCssJs.installedJs' => 'Currently installed JS',
+  'plugins.generic.addCssJs.footerInstalledJs' => 'Currently JS on the after pageFooter div',
+); ?>

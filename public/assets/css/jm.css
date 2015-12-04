@@ -1,0 +1,392 @@
+/**
+*jm.css
+*Author: Sam
+**/
+/*******Everything Sam starts*******/
+/**modding default styles**/
+/*#main*/
+#body {
+
+}
+#main {
+	padding: 0;
+	margin-left: 0;
+}
+#main .page-title {
+	font-family: 'Open Sans', sans-serif;
+	padding-top: 0;
+	margin: 0;
+	border-bottom: none;
+}
+
+/*a*/
+a:hover {
+	background: transparent;
+} 
+
+/*#navbar*/
+#navbar {
+	/**border-bottom: none;**/ 
+}
+/*#header*/
+#header {
+	background-color: #205081;
+	color: rgb(255, 255, 255);
+	box-shadow: rgba(0, 0, 0, 0.247059) 0px 5px 20px -5px inset;
+	border-radius: 0;
+}
+#header h1 {
+	font-family: 'Open Sans', sans-serif;
+	padding: 0;
+	color: rgb(255, 255, 255);
+}
+#content {
+	border-top: none; 
+	font-size: 14px; 
+}
+/**modding default styles end**/
+
+
+/**modding bootstrap**/
+.container {
+	max-width: 970px !important;
+}
+.jumbotron {
+	margin-bottom: 0;
+}
+.navbar {
+	border-radius: 0;
+}
+.nav-tabs.nav-stacked > li > a {
+	border: 1px solid #ddd;
+}
+.nav-tabs > li > a { 
+	border-radius: 0; 
+}
+.nav-tabs.nav-stacked > li:first-child > a {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+.nav-tabs.nav-stacked > li:last-child > a {
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+.nav-stacked > li + li {
+	margin-top: 0;
+}
+.nav-tabs {
+	border-bottom: none;
+}
+.text-left {
+	text-align: left !important;
+}
+.navbar-brand {
+	padding: 0;
+}
+.navbar-brand > img {
+	height: 100%;
+}
+.navbar-default {
+	background-color: #205081;
+	border: none;
+	color: rgb(255, 255, 255);
+	-moz-box-shadow: 0 0 15px 2px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 0 15px 2px rgba(0,0,0,0.3);
+	-o-box-shadow: 0 0 15px 2px rgba(0,0,0,0.3);
+	box-shadow: 0 0 15px 2px rgba(0,0,0,0.3);
+}
+.navbar-default .navbar-nav > li > a {
+	color: #fff;
+	opacity: .7;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:active {
+	color: #fff;
+	opacity: 1.0;
+}
+.navbar-form .input-group .form-control,
+.navbar-form .input-group .input-group-addon,
+.navbar-form .input-group .input-group-btn {
+	background-color: rgba(0, 0, 0, 0.2);
+	border-color: transparent;
+	color: rgba(255, 255, 255, 0.7);
+}
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.open>a:focus, 
+.navbar-default .navbar-nav>.open>a:hover {
+	color: #fff;
+	opacity: 1;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+/**modding bootstrap end**/
+
+
+/*main styling*/
+
+/*body*/
+body {
+	font-family: 'Open Sans', sans-serif;	
+}
+
+a:hover,
+a:focus,
+a:visited,
+a:active {
+	text-decoration: none !important;
+} 
+#navbar > .container {
+	padding-left: 0;
+}
+.control-group .controls {
+	font-size: 14px;
+}
+#searchForm .form-horizontal .control-label {
+	text-align: left;
+}
+.section-header {
+	border-bottom: 1px solid #eee;
+	margin: 30px 0 20px;
+	padding-bottom: 6px;
+}
+
+/*search*/
+#results {
+	margin-top: 25px;
+}
+
+#focusAndScopeDescription,
+.journal-setup {
+	padding-right: 2px;
+}
+
+/*#setupForm .alerts*/
+#setupForm .alert {
+	margin-bottom: 0;
+}
+/*spacing*/
+.mt-5 {
+	margin-top: 5px;
+}
+.mt-10 {
+	margin-top: 10px !important;
+}
+.mt-15 {
+	margin-top: 15px !important;
+}
+.mt-20 {
+	margin-top: 20px !important;
+}
+.mb-15 {
+	margin-bottom: 15px;
+}
+.pl-15 {
+	padding-left: 15px;
+}
+/*misc*/
+.checkbox .control-label {
+	padding-left: 35px;
+}
+.checkbox > .form-group {
+	padding-left: 20px;
+}
+ul li {
+	list-style: none;
+}
+.footer .well-lg {
+	border-radius: 0;
+	border-right: 0;
+}
+/*custom upload input-group*/
+.image-preview-input {
+	position: relative;
+	overflow: hidden;
+	margin: 0px;    
+	color: #333;
+	background-color: #fff;
+	border-color: #ccc;    
+}
+.image-preview-input input[type=file] {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.image-preview-input-title {
+	margin-left:2px;
+}
+
+/**Nav Menu**/
+.profile-img{
+	margin-right: 5px;
+	float: left;
+	background: url(../images/placeholder1.jpg) 50% 50% no-repeat; /* 50% 50% centers image in div */
+	background-size: auto 100%; /* Interchange this value depending on prefering width vs. height */
+	width: 20px;
+	height: 20px;
+}
+nav .navbar-form .btn {
+	background-color: rgba(0, 0, 0, 0.2);
+	border-color:transparent;
+	color: rgba(255, 255, 255, 0.7);
+}
+.navbar-nav > li > .dropdown-menu.bullet {
+	margin-top: 8px;
+}
+.dropdown-toggle > i.more {
+	font-size: 10px;
+	margin-left: 5px;
+	position: relative;
+	top: 1px;
+}
+/**little hack**/
+.navbar-nav .navbar-form #simpleQueryAutocomplete {
+	padding: 0;
+	width: 100%;
+}
+/*main styling end*/
+/*******Everything Sam ends*******/
+
+
+
+
+
+
+/*******Everything Abdul starts*******/
+/** Styling Navigation Bar Begins **/
+.nav1 {
+	background: #fff;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+}
+
+nav {
+ /** position: absolute;
+  bottom: 0;
+  height: 52px;
+  width: 100%; **/
+  background: #fff;
+}
+
+.goToTop {
+	position: fixed;
+	top: 0;
+	height: 52px;
+	z-index: 1;
+}
+/**Styling Navigation Bar Ends **/
+
+
+
+
+
+
+
+/* ----------------------------------------------------------------
+	Footer
+	-----------------------------------------------------------------*/
+
+
+	.footer {
+		padding-top: 10px;
+		/**padding-bottom: 10px; I removed the padding here**/
+	}
+
+	.footer_top {
+		margin-top: 2%;
+		color: #63b557;
+		font-size: 20px;
+		font-weight: 300;	
+	}
+
+	.well {
+		margin-bottom: 0px;
+	}
+
+	.text {
+		color: #FFF;
+	}
+
+	.counter {
+		font-size: 42px;
+		font-weight: 600;
+		/*font-family: "Raleway",sans-serif;*/
+	}
+
+	.counter.counter-small {
+		font-size: 28px;
+	}
+
+	.dark {
+		background-color: #333;
+		position: relative;
+		padding-top: 10px;
+		padding-bottom: 10px;	
+		border-top: 5px solid rgba(0,0,0,0.2);
+	}
+
+	.social {
+		display: inline-block;
+		cursor: pointer;
+		background-color: #33383B;
+		border-radius: 2px;
+		font-size: 20px;
+		color: #FFF;
+		text-align: center;
+		line-height: 35px;
+		margin-right: 3px;
+		margin-bottom: 5px;	
+	}
+
+	.social-item {
+		width: 35px;
+		height: 20px;
+		padding: 0px;
+		margin: 0px;	
+	}
+
+	.about-us {
+		font-size: 10px;
+		font-style: italic;
+	}
+
+	.navbar-main-menu-item {
+		padding-top: 4px;
+		padding-bottom: 4px;
+		font-size: 16px;
+		margin: 0 0 0 0;
+	}
+
+
+
+	/*******Everything Abdul ends*******/
+
+
+
+
+
+
+	/****local Open Sans font*****/
+	@font-face {
+		font-family: 'Open Sans';
+		src:url('../fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype'),
+		url("../fonts/Open_Sans/OpenSans-Regular.eot") format('embedded-opentype'); /* EOT file for IE */
+	}
+
+	@font-face {
+		font-family: 'Open Sans';
+		font-weight: bold;
+		src:url('../fonts/Open_Sans/OpenSans-Bold.ttf') format('truetype'),
+		url("../fonts/Open_Sans/OpenSans-Bold.eot") format('embedded-opentype'); /* EOT file for IE */
+	}
+
+	@font-face {
+		font-family: 'Open Sans-Light';
+		src:url('../fonts/Open_Sans/OpenSans-Light.ttf') format('truetype'),
+		url("../fonts/Open_Sans/OpenSans-Light.eot") format('embedded-opentype'); /* EOT file for IE */
+	}
+/****end Open Sans font*****/
