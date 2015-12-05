@@ -127,7 +127,7 @@ function prepBlockFields() {
 
 <p>
 {if $homeHeaderTitleImage[$formLocale]}
-{translate key="common.fileName"}: {$homeHeaderTitleImage[$formLocale].name|escape} {$homeHeaderTitleImage[$formLocale].dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteHomeHeaderTitleImage" value="{translate key="common.delete"}" class="btn btn-primary" />
+{translate key="common.fileName"}: {$homeHeaderTitleImage[$formLocale].name|escape} {$homeHeaderTitleImage[$formLocale].dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteHomeHeaderTitleImage" value="{translate key="common.delete"}" class="btn btn-danger" />
 </p>
 
 
@@ -140,11 +140,11 @@ function prepBlockFields() {
 <div class="form-horizontal">
 	<div class="form-group">
 		<strong>{fieldLabel name="homeHeaderTitleImageAltText" key="common.altText" class="col-sm-2 control-label"}</strong>
-		<div width="80%" class="col-sm-10"><input type="text" name="homeHeaderTitleImageAltText[{$formLocale|escape}]" value="{$homeHeaderTitleImageAltText[$formLocale]|escape}" size="40" maxlength="255" class="form-control" /></div>
+		<div class="col-sm-10"><input type="text" name="homeHeaderTitleImageAltText[{$formLocale|escape}]" value="{$homeHeaderTitleImageAltText[$formLocale]|escape}" size="40" maxlength="255" class="form-control" /></div>
 	</div>
-	<div valign="top">
+	<div class="form-group">
 		<div>&nbsp;</div>
-		<div class="value"><span class="instruct">{translate key="common.altTextInstructions"}</span></div>
+		<div class="col-sm-12"><span class="instruct">{translate key="common.altTextInstructions"}</span></div>
 	</div>
 </div>
 {/if}
@@ -161,7 +161,7 @@ function prepBlockFields() {
 </div>
 <p>
 {if $homeHeaderLogoImage[$formLocale]}
-{translate key="common.fileName"}: {$homeHeaderLogoImage[$formLocale].name|escape} {$homeHeaderLogoImage[$formLocale].dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteHomeHeaderLogoImage" value="{translate key="common.delete"}" class="btn btn-primary" />
+{translate key="common.fileName"}: {$homeHeaderLogoImage[$formLocale].name|escape} {$homeHeaderLogoImage[$formLocale].dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteHomeHeaderLogoImage" value="{translate key="common.delete"}" class="btn btn-danger" />
 </p>
 <p>
 <img src="{$publicFilesDir}/{$homeHeaderLogoImage[$formLocale].uploadName|escape:"url"}" width="{$homeHeaderLogoImage[$formLocale].width|escape}" height="{$homeHeaderLogoImage[$formLocale].height|escape}" style="border: 0;" alt="{translate key="common.homePageHeaderLogo.altText"}" />
@@ -173,7 +173,7 @@ function prepBlockFields() {
 		<div class="col-sm-9"><input type="text" name="homeHeaderLogoImageAltText[{$formLocale|escape}]" value="{$homeHeaderLogoImageAltText[$formLocale]|escape}" size="40" maxlength="255" class="form-control" /></div>
 	</div>
 	<div>
-		<td class="value"><span class="instruct">{translate key="common.altTextInstructions"}</span></td>
+		<td class="col-sm-12"><span class="instruct">{translate key="common.altTextInstructions"}</span></td>
 	</div>
 </div>
 {/if}
@@ -190,7 +190,7 @@ function prepBlockFields() {
 </div>
 <p>
 {if $journalThumbnail[$formLocale]}
-{translate key="common.fileName"}: {$journalThumbnail[$formLocale].name|escape} {$journalThumbnail[$formLocale].dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteJournalThumbnail" value="{translate key="common.delete"}" class="btn btn-primary" />
+{translate key="common.fileName"}: {$journalThumbnail[$formLocale].name|escape} {$journalThumbnail[$formLocale].dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteJournalThumbnail" value="{translate key="common.delete"}" class="btn btn-danger" />
 </p>
 <img src="{$publicFilesDir}/{$journalThumbnail[$formLocale].uploadName|escape:"url"}" width="{$journalThumbnail[$formLocale].width|escape}" height="{$journalThumbnail[$formLocale].height|escape}" style="border: 0;" alt="{translate key="common.journalThumbnail.altText"}" />
 <p>
@@ -236,7 +236,7 @@ function prepBlockFields() {
 </div>
 
 {if $homepageImage[$formLocale]}
-{translate key="common.fileName"}: {$homepageImage[$formLocale].name|escape} {$homepageImage[$formLocale].dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteHomepageImage" value="{translate key="common.delete"}" class="btn btn-primary" />
+{translate key="common.fileName"}: {$homepageImage[$formLocale].name|escape} {$homepageImage[$formLocale].dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteHomepageImage" value="{translate key="common.delete"}" class="btn btn-danger" />
 <br />
 <img src="{$publicFilesDir}/{$homepageImage[$formLocale].uploadName|escape:"url"}" width="{$homepageImage[$formLocale].width|escape}" height="{$homepageImage[$formLocale].height|escape}" style="border: 0;" alt="{translate key="common.journalHomepageImage.altText"}" />
 <br />
@@ -292,7 +292,7 @@ function prepBlockFields() {
 </div>
 <p>
 {if $pageHeaderTitleImage[$formLocale]}
-{translate key="common.fileName"}: {$pageHeaderTitleImage[$formLocale].name|escape} {$pageHeaderTitleImage[$formLocale].dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deletePageHeaderTitleImage" value="{translate key="common.delete"}" class="button" />
+{translate key="common.fileName"}: {$pageHeaderTitleImage[$formLocale].name|escape} {$pageHeaderTitleImage[$formLocale].dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deletePageHeaderTitleImage" value="{translate key="common.delete"}" class="btn btn-danger" />
 </p>
 <img src="{$publicFilesDir}/{$pageHeaderTitleImage[$formLocale].uploadName|escape:"url"}" width="{$pageHeaderTitleImage[$formLocale].width|escape}" height="{$pageHeaderTitleImage[$formLocale].height|escape}" style="border: 0;" alt="{translate key="common.pageHeader.altText"}" />
 <p>
@@ -302,7 +302,7 @@ function prepBlockFields() {
 		<div class="col-sm-10"><input type="text" name="pageHeaderTitleImageAltText[{$formLocale|escape}]" value="{$pageHeaderTitleImageAltText[$formLocale]|escape}" size="40" maxlength="255" class="form-control" /></div>
 	</div>
 	<div class="form-group">
-		<div class="value"><span class="instruct">{translate key="common.altTextInstructions"}</span></div>
+		<div class="col-sm-12"><span class="instruct">{translate key="common.altTextInstructions"}</span></div>
 	</div>
 </div>
 </p>
@@ -319,7 +319,7 @@ function prepBlockFields() {
 </div>
 <p>
 {if $pageHeaderLogoImage[$formLocale]}
-{translate key="common.fileName"}: {$pageHeaderLogoImage[$formLocale].name|escape} {$pageHeaderLogoImage[$formLocale].dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deletePageHeaderLogoImage" value="{translate key="common.delete"}" class="btn btn-primary" />
+{translate key="common.fileName"}: {$pageHeaderLogoImage[$formLocale].name|escape} {$pageHeaderLogoImage[$formLocale].dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deletePageHeaderLogoImage" value="{translate key="common.delete"}" class="btn btn-danger" />
 </p>
 <img src="{$publicFilesDir}/{$pageHeaderLogoImage[$formLocale].uploadName|escape:"url"}" width="{$pageHeaderLogoImage[$formLocale].width|escape}" height="{$pageHeaderLogoImage[$formLocale].height|escape}" style="border: 0;" alt="{translate key="common.pageHeaderLogo.altText"}" />
 <p>
@@ -349,7 +349,7 @@ function prepBlockFields() {
 </div>
 
 {if $journalFavicon[$formLocale]}
-{translate key="common.fileName"}: {$journalFavicon[$formLocale].name|escape} {$journalFavicon[$formLocale].dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteJournalFavicon" value="{translate key="common.delete"}" class="btn btn-primary" />
+{translate key="common.fileName"}: {$journalFavicon[$formLocale].name|escape} {$journalFavicon[$formLocale].dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteJournalFavicon" value="{translate key="common.delete"}" class="btn btn-danger" />
 
 <p>&nbsp;</p
 <img src="{$publicFilesDir}/{$journalFavicon[$formLocale].uploadName|escape:"url"}" width="16px" height="16px" style="border: 0;" alt="favicon" />
@@ -391,7 +391,7 @@ function prepBlockFields() {
 {foreach name=navItems from=$navItems[$formLocale] key=navItemId item=navItem}
 	<div class="form-group">
 		{fieldLabel name="navItems-$navItemId-name" key="manager.setup.labelName" class="col-sm-2 control-label"}
-			<div class="col-sm-10"><input type="text" name="navItems[{$formLocale|escape}][{$navItemId|escape}][name]" id="navItems-{$navItemId|escape}-name" value="{$navItem.name|escape}" size="30" maxlength="90" class="form-control" /></div><br></br> <div class="col-md-offset-2 col-sm-10"><input type="submit" name="delNavItem[{$navItemId|escape}]" value="{translate key="common.delete"}" class="btn btn-primary" /></div>
+			<div class="col-sm-10"><input type="text" name="navItems[{$formLocale|escape}][{$navItemId|escape}][name]" id="navItems-{$navItemId|escape}-name" value="{$navItem.name|escape}" size="30" maxlength="90" class="form-control" /></div><br></br> <div class="col-md-offset-2 col-sm-10"><input type="submit" name="delNavItem[{$navItemId|escape}]" value="{translate key="common.delete"}" class="btn btn-danger" /></div>
 			<div class="form-group">
 				<div class="col-sm-10 col-md-offset-2 checkbox">
 					<label for="navItems-{$navItemId|escape}-isLiteral">
@@ -425,7 +425,7 @@ function prepBlockFields() {
 
 
 	<div class="form-group">
-		{fieldLabel name="navItems-0-name" key="manager.setup.labelName class="col-sm-2 control-label"}
+		{fieldLabel name="navItems-0-name" key="manager.setup.labelName" class="col-sm-2 control-label"}
 		<div class="col-sm-10">
 			<input type="text" name="navItems[{$formLocale|escape}][0][name]" id="navItems-0-name" size="30" maxlength="90" class="form-control" />
 		</div>
@@ -489,7 +489,7 @@ function prepBlockFields() {
 <p><br></br><br></br></p>
 
 {if $journalStyleSheet}
-{translate key="common.fileName"}: <a href="{$publicFilesDir}/{$journalStyleSheet.uploadName|escape:"url"}" class="file">{$journalStyleSheet.name|escape}</a> {$journalStyleSheet.dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteJournalStyleSheet" value="{translate key="common.delete"}" class="btn btn-primary" />
+{translate key="common.fileName"}: <a href="{$publicFilesDir}/{$journalStyleSheet.uploadName|escape:"url"}" class="file">{$journalStyleSheet.name|escape}</a> {$journalStyleSheet.dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteJournalStyleSheet" value="{translate key="common.delete"}" class="btn btn-danger" />
 {/if}
 
 <table id="assignBlocksToSidebars" border="0" align="center" style="width: 100%;">
@@ -587,11 +587,13 @@ function prepBlockFields() {
 
 </div>
 
+<p class="alert alert-info mt-20"><span class="formRequired"><i class="glyphicon glyphicon-exclamation-sign"></i>&nbsp;&nbsp;&nbsp;{translate key="common.requiredField"}</span></p>
+
 <hr>
 
 <p><input type="submit" onclick="prepBlockFields()" value="{translate key="common.saveAndContinue"}" class="btn btn-primary" /> <input type="button" value="{translate key="common.cancel"}" class="btn btn-primary btn-warning" onclick="document.location.href='{url op="setup" escape=false}'" /></p>
 
-<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
+
 
 </form> <!-- end form -->
 
