@@ -42,11 +42,7 @@
 \locale\en_US\manager.xml
 \lib\pkp\locale\en_US\manager.xml
 \lib\pkp\styles\common.css
-<<<<<<< HEAD
-\plugins\blocks\*
-=======
 \plugins\blocks\*
 
 \classes\template\TemplateManager.inc.php
 \lib\pkp\classes\template\PKPTemplateManager.inc.php
->>>>>>> test

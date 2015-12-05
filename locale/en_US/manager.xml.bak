@@ -462,7 +462,7 @@
 	<message key="manager.setup.sectionsDefaultSectionDescription">(If sections are not added, then items are submitted to the Articles section by default.)</message>
 	<message key="manager.setup.sectionsDescription"><![CDATA[To create or modify sections for the journal (e.g., Articles, Book Reviews, etc.), go to Section Management.<br /><br />Authors on submitting items to the journal will designate...]]></message>
 	<message key="manager.setup.securitySettings">Access and Security Settings</message>
-	<message key="manager.setup.securitySettingsDescription">Jounrnal Managers provides a number of security-related options that can be used to restrict the journal's contents, and maintain additional information about submissions for auditing purposes.</message>
+	<message key="manager.setup.securitySettingsDescription">OJS provides a number of security-related options that can be used to restrict the journal's contents, and maintain additional information about submissions for auditing purposes.</message>
 	<message key="manager.setup.selectEditorDescription">The journal editor who will see it through the editorial process.</message>
 	<message key="manager.setup.selectSectionDescription">The journal section for which the item will be considered.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Always show galley links and indicate restricted access.</message>

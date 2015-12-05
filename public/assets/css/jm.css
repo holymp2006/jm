@@ -86,8 +86,6 @@ a:hover {
 .navbar-brand > img {
 	height: 100%;
 }
-<<<<<<< HEAD
-=======
 .navbar-default {
 	background-color: #205081;
 	border: none;
@@ -121,7 +119,6 @@ a:hover {
 	opacity: 1;
 	background-color: rgba(0, 0, 0, 0.2);
 }
->>>>>>> test
 /**modding bootstrap end**/
 
 
@@ -196,13 +193,10 @@ a:active {
 ul li {
 	list-style: none;
 }
-<<<<<<< HEAD
-=======
 .footer .well-lg {
 	border-radius: 0;
 	border-right: 0;
 }
->>>>>>> test
 /*custom upload input-group*/
 .image-preview-input {
 	position: relative;
@@ -236,8 +230,6 @@ ul li {
 	width: 20px;
 	height: 20px;
 }
-<<<<<<< HEAD
-=======
 nav .navbar-form .btn {
 	background-color: rgba(0, 0, 0, 0.2);
 	border-color:transparent;
@@ -252,7 +244,6 @@ nav .navbar-form .btn {
 	position: relative;
 	top: 1px;
 }
->>>>>>> test
 /**little hack**/
 .navbar-nav .navbar-form #simpleQueryAutocomplete {
 	padding: 0;

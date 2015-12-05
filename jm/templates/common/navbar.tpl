@@ -32,11 +32,7 @@
 					<li role="presentation" class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="500" data-close-others="false" href="#" role="button" aria-expanded="false">About Umuawulu<i class="more glyphicon glyphicon-chevron-down"></i>
 						</a>
-<<<<<<< HEAD
-						<ul class="dropdown-menu" role="menu"> 
-=======
 						<ul class="dropdown-menu bullet pull-right" role="menu"> 
->>>>>>> test
 							<li><a tabindex="-1" href="#"><i class="fa fa-users"></i>History</a></li>
 							<li><a tabindex="-1" href="#"><i class="fa fa-users"></i>People And Culture</a></li>
 							<li><a tabindex="-1" href="#"><i class="fa fa-bank"></i>U.P.U.</a></li>	
@@ -101,11 +97,7 @@
 							</div>
 							{$loggedInUsername|escape}<i class="more glyphicon glyphicon-chevron-down"></i>
 						</a>
-<<<<<<< HEAD
-						<ul class="dropdown-menu" role="menu">
-=======
 						<ul class="dropdown-menu bullet pull-right" role="menu">
->>>>>>> test
 							{if $hasOtherJournals}
 							<li><a href="{url journal="index" page="user"}">{translate key="plugins.block.user.myJournals"}</a></li>
 							{/if}
