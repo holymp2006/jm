@@ -20,15 +20,15 @@
 {/if}
 
 <div id="journals">
-<h3>{translate key="journal.journals"}</h3>
-<ul>
+<h3 class="list-group-item active"><span><i class=" glyphicon glyphicon-book"></i></span>  {translate key="journal.journals"}</h3>
+<ul class="list-group">
 {iterate from=journals item=journal}
-	<li><a href="{url journal=$journal->getPath() page="about" op="index"}">{$journal->getLocalizedTitle()|escape}</a></li>
+	<li class="list-group-item"><a href="{url journal=$journal->getPath() page="about" op="index"}">{$journal->getLocalizedTitle()|escape}</a></li>
 {/iterate}
 </ul>
 </div>
 
-<a href="{url op="aboutThisPublishingSystem"}">{translate key="about.aboutThisPublishingSystem"}</a>
+<a href="{url op="aboutThisPublishingSystem"}" class="btn btn-default hvr-sweep-to-bottom">{translate key="about.aboutThisPublishingSystem"}</a>
 
 {include file="common/footer.tpl"}
 

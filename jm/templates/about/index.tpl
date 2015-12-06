@@ -12,8 +12,9 @@
 {assign var="pageTitle" value="about.aboutTheJournal"}
 {include file="common/header.tpl"}
 {/strip}
+
 <div id="aboutPeople">
-<h3 class="list-group-item active">{translate key="about.people"}</h3>
+<h3 class="list-group-item active"><span><i class="fa fa-users"></i></span> {translate key="about.people"}</h3>
 <ul class="list-group">
 	{if not (empty($journalSettings.mailingAddress) && empty($journalSettings.contactName) && empty($journalSettings.contactAffiliation) && empty($journalSettings.contactMailingAddress) && empty($journalSettings.contactPhone) && empty($journalSettings.contactFax) && empty($journalSettings.contactEmail) && empty($journalSettings.supportName) && empty($journalSettings.supportPhone) && empty($journalSettings.supportEmail))}
 		<li class="list-group-item"><a href="{url op="contact"}">{translate key="about.contact"}</a></li>
@@ -28,7 +29,7 @@
 </ul>
 </div>
 <div id="aboutPolicies">
-<h3 class="list-group-item active">{translate key="about.policies"}</h3>
+<h3 class="list-group-item active"><span><i class="fa fa-paperclip"></i></span> {translate key="about.policies"}</h3>
 <ul class="list-group">
 	{if $currentJournal->getLocalizedSetting('focusScopeDesc') != ''}<li class="list-group-item"><a href="{url op="editorialPolicies" anchor="focusAndScope"}">{translate key="about.focusAndScope"}</a></li>{/if}
 	<li class="list-group-item"><a href="{url op="editorialPolicies" anchor="sectionPolicies"}">{translate key="about.sectionPolicies"}</a></li>
@@ -49,7 +50,7 @@
 </ul>
 </div>
 <div id="aboutSubmissions">
-<h3 class="list-group-item active">{translate key="about.submissions"}</h3>
+<h3 class="list-group-item active"><span><i class="fa fa-mail-forward"></i></span> {translate key="about.submissions"}</h3>
 <ul class="list-group">
 	{if !$currentJournal->getSetting('disableUserReg')}<li class="list-group-item"><a href="{url op="submissions" anchor="onlineSubmissions"}">{translate key="about.onlineSubmissions"}</a></li>{/if}
 	{if $currentJournal->getLocalizedSetting('authorGuidelines') != ''}<li class="list-group-item"><a href="{url op="submissions" anchor="authorGuidelines"}">{translate key="about.authorGuidelines"}</a></li>{/if}
@@ -60,7 +61,7 @@
 </ul>
 </div>
 <div id="aboutOther">
-<h3 class="list-group-item active">{translate key="about.other"}</h3>
+<h3 class="list-group-item active"><span><i class="fa fa-plus-square"></i></span> {translate key="about.other"}</h3>
 <ul class="list-group">
 	{if not ($currentJournal->getSetting('publisherInstitution') == '' && $currentJournal->getLocalizedSetting('publisherNote') == '' && $currentJournal->getLocalizedSetting('contributorNote') == '' && empty($journalSettings.contributors) && $currentJournal->getLocalizedSetting('sponsorNote') == '' && empty($journalSettings.sponsors))}<li class="list-group-item"><a href="{url op="journalSponsorship"}">{translate key="about.journalSponsorship"}</a></li>{/if}
 	{if $currentJournal->getLocalizedSetting('history') != ''}<li class="list-group-item"><a href="{url op="history"}">{translate key="about.history"}</a></li>{/if}
