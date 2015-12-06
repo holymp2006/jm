@@ -44,6 +44,9 @@ a:hover {
 	border-top: none; 
 	font-size: 14px; 
 }
+ul.menu a {
+    text-transform: Capitalize; 
+}
 /**modding default styles end**/
 
 
@@ -135,6 +138,16 @@ a:visited,
 a:active {
 	text-decoration: none !important;
 } 
+/*header*/
+#header {
+min-height: 350px;
+}
+#header > .container {
+    padding: inherit;
+    padding-left: 0;
+    padding-right: 0;
+}
+
 #navbar > .container {
 	padding-left: 0;
 }
@@ -222,6 +235,17 @@ ul li {
 }
 
 /**Nav Menu**/
+.dropdown-menu.bullet {
+	border: 0;
+	border-top: 10px solid #205081;
+}
+.dropdown-menu.bullet::before {
+	top: -17px;
+}
+.dropdown-menu.bullet::after {
+	border-color: transparent transparent #205081;
+	top: -16px;
+}
 .profile-img{
 	margin-right: 5px;
 	float: left;
@@ -244,6 +268,39 @@ nav .navbar-form .btn {
 	position: relative;
 	top: 1px;
 }
+
+/**Navbar login**/
+#login-nav{
+	min-width: 250px;
+	padding: 14px 14px 0;
+	color: #333;
+/*	overflow:hidden;
+background-color:rgba(255,255,255,.8); */
+}
+#login-nav .help-block{
+	font-size:12px    
+}
+#login-nav .bottom{
+	/*	background-color:rgba(255,255,255,.8); */
+	border-top:1px solid #ddd;
+	clear:both;
+	padding:14px;
+}
+#login-nav .form-group {
+	margin-bottom: 10px;
+}
+
+@media(max-width:768px){
+	#login-nav{
+		background-color: inherit;
+		color: #fff;
+	}
+	#login-nav .bottom{
+		background-color: inherit;
+		border-top:0 none;
+	}
+}
+
 /**little hack**/
 .navbar-nav .navbar-form #simpleQueryAutocomplete {
 	padding: 0;
@@ -354,6 +411,13 @@ nav {
 		font-style: italic;
 	}
 
+
+	.navbar-main-menu-item {
+		padding-top: 4px;
+		padding-bottom: 4px;
+		font-size: 16px;
+		margin: 0 0 0 0;
+	}
 
 
 	/*******Everything Abdul ends*******/

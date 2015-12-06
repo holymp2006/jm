@@ -144,7 +144,7 @@
 									</span>
 								</div>
 							</div>  			
-						</div> 
+						</div> <!--.row-->
 
 					</div>
 

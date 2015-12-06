@@ -132,6 +132,9 @@
 	{*bootstrap-hover-dropdown*}
 	<script type="text/javascript" src="{$baseUrl}/public/assets/js/bootstrap-hover-dropdown.min.js"></script>
 
+	{*backstretch*}
+	<script type="text/javascript" src="{$baseUrl}/public/assets/js/jquery.backstretch.min.js"></script>
+
 	{*dropdowns-enhancement*}
 	<!-- <script type="text/javascript" src="{$baseUrl}/public/assets/js/dropdowns-enhancement.js"></script> -->
 	<link rel="stylesheet" href="{$baseUrl}/public/assets/css/dropdowns-enhancement.css" type="text/css" />

@@ -69,8 +69,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4 text">
-					<div style="background: url('{$baseUrl}/public/assets/images/footer-logo-bg.png') no-repeat;">
-						<img src="{$baseUrl}/public/assets/images/footer-logo.png" alt="" class="footer-logo">
+					<div>
+						<img src="{$baseUrl}/public/assets/images/footer-logo.png" alt="" class="footer-logo img-responsive">
 						<div style="background: url('{$baseUrl}/public/assets/images/world-map.png') no-repeat center center; background-size: 100%;"> <p></p>
 							<address>
 								<i class="fa fa-map-marker"></i><strong>  Headquarters:</strong><br>

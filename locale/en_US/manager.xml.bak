@@ -20,7 +20,7 @@
 	<message key="manager.groups.context.editorialTeam.short">Editorial Team</message>
 	<message key="manager.groups.context.people">Have title appear as its own category under People (e.g. Editorial Board)</message>
 	<message key="manager.groups.create">Create Position Title</message>
-	<message key="manager.groups.disableBoard">Journal Managers lists people in Editorial Team under assigned roles (Journal Manager, Copyeditor, etc.)</message>
+	<message key="manager.groups.disableBoard">OJS lists people in Editorial Team under assigned roles (Journal Manager, Copyeditor, etc.)</message>
 	<message key="manager.groups.enableBoard">The Journal Manager creates titles and adds people under each title.</message>
 	<message key="manager.groups.enableBoard.description"><![CDATA[Under <a href="{$aboutEditorialTeamUrl}">People</a> in About the Journal:]]></message>
 	<message key="manager.groups.noneCreated">No editorial team positions have been created.</message>
@@ -30,7 +30,7 @@
 	<message key="manager.language.forms">Forms</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">This will replace any locale-specific journal settings you had for this locale</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">Reload defaults</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[the System can be made available to users in any of several supported languages. As well, the System can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br/>If a language supported by Journal Managers is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the system documentation.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>
 	<message key="manager.languages.noneAvailable">Sorry, no additional languages are available. Contact your site administrator if you wish to use additional languages with this journal.</message>
 	<message key="manager.languages.primaryLocaleInstructions">This will be the default language for the journal site.</message>
 	<message key="manager.managementPages">Management Pages</message>
@@ -40,7 +40,7 @@
 	<message key="manager.payment.authorFees">Author Fees</message>
 	<message key="manager.payment.authorFeesDescription">Selected options, along with their descriptions and fees (which can be edited below), will appear in Step 1 of the submission process and in About the Journal under Submissions, as well as at points where payment is required.</message>
 	<message key="manager.payment.currency">Currency</message>
-	<message key="manager.payment.currencymessage">Journal Managers does not perform any currency conversions.  If accepting payments for subscriptions, you must ensure that the subscription currency matches the one specified here.</message>
+	<message key="manager.payment.currencymessage">OJS does not perform any currency conversions.  If accepting payments for subscriptions, you must ensure that the subscription currency matches the one specified here.</message>
 	<message key="manager.payment.description">Description</message>
 	<message key="manager.payment.details">Details</message>
 	<message key="manager.payment.editSubscription">Edit Subscription</message>
@@ -269,7 +269,7 @@
 	<message key="manager.setup.editorialReviewBoardDescription">Journals have Editorial Boards to oversee the editorial direction of the journal, participate in the appointment of editors, and, by virtue of board members' reputations, give the journal some standing in the field. Review Boards play a similar role but in addition, they lead the peer review process. Review Board members will not have access to the journal's administrative system but will be added to the list of those available to do peer reviews.</message>
 	<message key="manager.setup.emailBounceAddress">Bounce Address</message>
 	<message key="manager.setup.emailBounceAddressDescription">Any undeliverable emails will result in an error message to this address.</message>
-	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>allow_envelope_sender</tt> option in the system configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the system documentation.]]></message>
+	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>allow_envelope_sender</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
 	<message key="manager.setup.emails">Email Identification</message>
 	<message key="manager.setup.emailHeader">Email Header</message>
 	<message key="manager.setup.emailHeaderDescription">The prepared emails that are sent by the system on behalf of the journal will begin with the following header. These emails will be addressed from the Principal Contact, so it's important to clarify that the Primary Contact is not necessarily responsible for the message content, which may be sent on behalf of a different user.</message>
@@ -316,7 +316,7 @@
 	<message key="manager.setup.information.forLibrarians">For Librarians</message>
 	<message key="manager.setup.information.forReaders">For Readers</message>
 	<message key="manager.setup.initialIssue">Initial issue</message>
-	<message key="manager.setup.initialIssueDescription">Depending on the format selected, identify the issue, volume, and/or year of the first issue to be published with Journal Managers:</message>
+	<message key="manager.setup.initialIssueDescription">Depending on the format selected, identify the issue, volume, and/or year of the first issue to be published with OJS:</message>
 	<message key="manager.setup.institution">Institution</message>
 	<message key="manager.setup.issnDescription"><![CDATA[The ISSN (International Standard Serial Number) is an eight-digit number which identifies periodical publications as such, including electronic serials. It is managed by a world wide network of National Centres coordinated by an International Centre based in Paris, backed by Unesco and the French Government. A number can be obtained from the <a href="http://www.issn.org" target="_new">ISSN web site</a>.  This can be done at any point in operating the journal.]]></message>
 	<message key="manager.setup.issuePerVolume">Issues per volume</message>
@@ -432,8 +432,8 @@
 	<message key="manager.setup.reviewGuidelines">Review Guidelines</message>
 	<message key="manager.setup.reviewGuidelinesDescription"><![CDATA[The Review Guidelines will provide reviewers with criteria for judging a submission's suitability for publication in the journal, and can include any special instructions for preparing an effective and helpful review. In conducting the review, reviewers are presented with with two open text boxes, the first "for author and editor," and the second "for editor." Alternatively, the Journal Manager can create a peer review form under <a href="{$reviewFormsUrl}" class="action">Review Forms</a>. In all cases, editors will have the option of including the reviews in corresponding with the author.]]></message>
 	<message key="manager.setup.reviewOptions">Review Options</message>
-	<message key="manager.setup.reviewOptions.automatedReminders">Automated email reminders (available in the system's default Emails) can be sent to reviewers at two points (while the editor can always email the reviewer directly as well)</message>
-	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the system configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the system documentation.]]></message>
+	<message key="manager.setup.reviewOptions.automatedReminders">Automated email reminders (available in OJS's default Emails) can be sent to reviewers at two points (while the editor can always email the reviewer directly as well)</message>
+	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
 	<message key="manager.setup.reviewOptions.blindReview">Blind Review</message>
 	<message key="manager.setup.reviewOptions.noteOnModification">Can be modified during the editorial process.</message>
 	<message key="manager.setup.reviewOptions.numWeeksPerReview">The typical period of time allowed for reviews</message>
@@ -452,7 +452,7 @@
 	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Provide links to <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Ensuring a Blind Review</a> on pages where authors and reviewers upload files.]]></message>
 	<message key="manager.setup.reviewPolicy">Review Policy</message>
 	<message key="manager.setup.reviewProcess">Review Process</message>
-	<message key="manager.setup.reviewProcessDescription"><![CDATA[Journal Managers supports two models for managing the review process. The Standard Review Process is recommended because it steps reviewers through the process, ensures a complete review history for each submission, and takes advantage of automatic reminder notification, and standard recommendations for submissions (Accept; Accept with revisions; Submit for review; Submit elsewhere; Decline; See comments).<br /><br />Select one of the following:]]></message>
+	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJS supports two models for managing the review process. The Standard Review Process is recommended because it steps reviewers through the process, ensures a complete review history for each submission, and takes advantage of automatic reminder notification, and standard recommendations for submissions (Accept; Accept with revisions; Submit for review; Submit elsewhere; Decline; See comments).<br /><br />Select one of the following:]]></message>
 	<message key="manager.setup.reviewProcessEmail">Email-Attachment Review Process</message>
 	<message key="manager.setup.reviewProcessStandard">Standard Review Process</message>
 	<message key="manager.setup.reviewProcessStandardDescription">Editors will email selected Reviewers the title and abstract of the submission, as well as an invitation to log into the journal web site to complete the review. Reviewers enter the journal web site to agree to do the review, to download submissions, submit their comments, and select a recommendation.</message>
@@ -462,7 +462,7 @@
 	<message key="manager.setup.sectionsDefaultSectionDescription">(If sections are not added, then items are submitted to the Articles section by default.)</message>
 	<message key="manager.setup.sectionsDescription"><![CDATA[To create or modify sections for the journal (e.g., Articles, Book Reviews, etc.), go to Section Management.<br /><br />Authors on submitting items to the journal will designate...]]></message>
 	<message key="manager.setup.securitySettings">Access and Security Settings</message>
-	<message key="manager.setup.securitySettingsDescription">Jounrnal Managers provides a number of security-related options that can be used to restrict the journal's contents, and maintain additional information about submissions for auditing purposes.</message>
+	<message key="manager.setup.securitySettingsDescription">OJS provides a number of security-related options that can be used to restrict the journal's contents, and maintain additional information about submissions for auditing purposes.</message>
 	<message key="manager.setup.selectEditorDescription">The journal editor who will see it through the editorial process.</message>
 	<message key="manager.setup.selectSectionDescription">The journal section for which the item will be considered.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Always show galley links and indicate restricted access.</message>
@@ -518,7 +518,7 @@
 	<message key="manager.statistics.reports.defaultReport.issueTableOfContents">Issue table of contents page views</message>
 	<message key="manager.statistics.reports.defaultReport.issueTableOfContentsAndDownloads">Issue table of contents and downloads</message>
 	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Journal main page views</message>
-	<message key="manager.statistics.reports.description">the system generates reports that track the details associated with processing submissions to the journal from the perspective of submissions, editors, reviewers, and sections, over a given period of time. Reports are generated in CSV format which requires a spreadsheet application to view.</message>
+	<message key="manager.statistics.reports.description">OJS generates reports that track the details associated with processing submissions to the journal from the perspective of submissions, editors, reviewers, and sections, over a given period of time. Reports are generated in CSV format which requires a spreadsheet application to view.</message>
 	<message key="manager.statistics.reports.generateReport">Generate custom report</message>
 	<message key="manager.statistics.reports.advancedOptions">Advanced Options</message>
 	<message key="manager.statistics.reports.advancedOptions.label">Customize columns, filter and ordering options. Changing any of these options might change the expected report template result.</message>
@@ -556,7 +556,7 @@
 	<message key="manager.statistics.statistics.count.revise">Resubmit</message>
 	<message key="manager.statistics.statistics.daysPerReview">Days to review</message>
 	<message key="manager.statistics.statistics.daysToPublication">Days to publication</message>
-	<message key="manager.statistics.statistics.description">the system calculates the following statistics for each journal. The "days to review" is calculated from date of submission (or designation of Review Version) to the initial Editor Decision, while the "days to publish" is measured for accepted submissions from its original uploading to its publication.</message>
+	<message key="manager.statistics.statistics.description">OJS calculates the following statistics for each journal. The "days to review" is calculated from date of submission (or designation of Review Version) to the initial Editor Decision, while the "days to publish" is measured for accepted submissions from its original uploading to its publication.</message>
 	<message key="manager.statistics.statistics.itemsPublished">Items published</message>
 	<message key="manager.statistics.statistics.makePublic">Check items to be made available to readers in About the Journal.</message>
 	<message key="manager.statistics.statistics.note">Note: Percentages for peer reviewed submissions may not add up to 100%, as items resubmitted are either accepted, declined, or still in process.</message>
@@ -591,8 +591,8 @@
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Notify subscribers by email</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">week(s) before subscription expiry.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Subscription Expiry Reminders</message>
-	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Automated email reminders (available for editing by Journal Managers in the system's Prepared Emails) can be sent to subscribers both before and after a subscription has expired.</message>
-	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the system configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the system documentation.]]></message>
+	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Automated email reminders (available for editing by Journal Managers in OJS's Prepared Emails) can be sent to subscribers both before and after a subscription has expired.</message>
+	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
 	<message key="manager.subscriptionPolicies.expirySelectOne">Select one of the following:</message>
 	<message key="manager.subscriptionPolicies.htmlInstructions"><![CDATA[HTML can be used in textarea (for font size, color, etc.), with "returns" treated as <tt>&lt;br&gt;</tt>; HTML editor works with Firefox browsers.]]></message>
 	<message key="manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid">Please select a valid value for the number of months after subscription expiry.</message>
@@ -600,9 +600,9 @@
 	<message key="manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid">Please select a valid value for the number of weeks after subscription expiry.</message>
 	<message key="manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid">Please select a valid value for the number of weeks before subscription expiry.</message>
 	<message key="manager.subscriptionPolicies.openAccessNotificationDescription">Registered readers will have the option of receiving the table of contents by email when an issue becomes open access.</message>
-	<message key="manager.subscriptionPolicies.openAccessNotificationDisabled"><![CDATA[<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>scheduled_tasks</tt> option in the system configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the system documentation.]]></message>
+	<message key="manager.subscriptionPolicies.openAccessNotificationDisabled"><![CDATA[<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Online Payment Notifications</message>
-	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">Automated email notifications (available for editing by Journal Managers in the system's Prepared Emails) can be sent to the Subscription Manager upon the completion of subscription online payments.</message>
+	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">Automated email notifications (available for editing by Journal Managers in OJS's Prepared Emails) can be sent to the Subscription Manager upon the completion of subscription online payments.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">Notify Subscription Manager by email upon online purchase of an Individual subscription.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional">Notify Subscription Manager by email upon online purchase of an Institutional subscription (recommended).</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual">Notify Subscription Manager by email upon online renewal of an Individual subscription.</message>
