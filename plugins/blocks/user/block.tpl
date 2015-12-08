@@ -8,7 +8,9 @@
  * Common site sidebar menu -- user tools.
  *
  *}
-<div class="block" id="sidebarUser">
+
+ {* 
+<!-- <div class="block" id="sidebarUser">
 	{if !$implicitAuth}
 		<span class="blockTitle">{translate key="navigation.user"}</span>
 	{/if}
@@ -51,3 +53,5 @@
 		{/if}
 	{/if}
 </div>
+ -->
+*}

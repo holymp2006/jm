@@ -10,11 +10,12 @@
  *}
 {if !empty($forReaders) || !empty($forAuthors) || !empty($forLibrarians)}
 <div class="block" id="sidebarInformation">
-	<span class="blockTitle">{translate key="plugins.block.information.link"}</span>
+	<span class="blockTitle jm-sidebar-list-heading"><i class="glyphicon glyphicon-info-sign"></i> {translate key="plugins.block.information.link"}</span>
 	<ul>
-		{if !empty($forReaders)}<li><a href="{url page="information" op="readers"}">{translate key="navigation.infoForReaders"}</a></li>{/if}
-		{if !empty($forAuthors)}<li><a href="{url page="information" op="authors"}">{translate key="navigation.infoForAuthors"}</a></li>{/if}
-		{if !empty($forLibrarians)}<li><a href="{url page="information" op="librarians"}">{translate key="navigation.infoForLibrarians"}</a></li>{/if}
+		{if !empty($forReaders)}<li class="jm-sidebar-list-item"><a href="{url page="information" op="readers"}"><i class="fa fa-book"></i> {translate key="navigation.infoForReaders"}</a></li>{/if}
+		{if !empty($forAuthors)}<li class="jm-sidebar-list-item"><a href="{url page="information" op="authors"}"><i class="fa fa-pencil"></i> {translate key="navigation.infoForAuthors"}</a></li>{/if}
+		{if !empty($forLibrarians)}<li class="jm-sidebar-list-item"><a href="{url page="information" op="librarians"}"><i class="fa fa-tags"></i> {translate key="navigation.infoForLibrarians"}</a></li>{/if}
 	</ul>
 </div>
+<hr>
 {/if}

@@ -9,11 +9,11 @@
  *
  *}
 <div class="block" id="sidebarSectionEditor">
-	<span class="blockTitle">{translate key="user.role.sectionEditor"}</span>
-	<span class="blockSubtitle">{translate key="article.submissions"}</span>
-	<ul>
-		<li><a href="{url op="index" path="submissionsInReview"}">{translate key="common.queue.short.submissionsInReview"}</a>&nbsp;({if $submissionsCount[0]}{$submissionsCount[0]}{else}0{/if})</li>
-		<li><a href="{url op="index" path="submissionsInEditing"}">{translate key="common.queue.short.submissionsInEditing"}</a>&nbsp;({if $submissionsCount[1]}{$submissionsCount[1]}{else}0{/if})</li>
-		<li><a href="{url op="index" path="submissionsArchives"}">{translate key="common.queue.short.submissionsArchives"}</a></li>
+	<span class="blockTitle"><h4 class="jm-sidebar-list-heading"><i class="glyphicon glyphicon-list-alt"></i> {translate key="user.role.sectionEditor"}</h4></span>
+	<span class="blockSubtitle"><i class="glyphicon glyphicon-share-alt"></i> {translate key="article.submissions"}</span>
+	<ul style="margin-top: 8px;">
+		<li class="jm-sidebar-list-item"><a href="{url op="index" path="submissionsInReview"}"><i class="glyphicon glyphicon-list-alt"></i> {translate key="common.queue.short.submissionsInReview"}</a>&nbsp;<span class="badge">{if $submissionsCount[0]}{$submissionsCount[0]}{else}0{/if}</span></li>
+		<li class="jm-sidebar-list-item"><a href="{url op="index" path="submissionsInEditing"}"><i class="glyphicon glyphicon-pencil"></i> {translate key="common.queue.short.submissionsInEditing"}</a>&nbsp;<span class="badge">{if $submissionsCount[1]}{$submissionsCount[1]}{else}0{/if}</span></li>
+		<li class="jm-sidebar-list-item"><a href="{url op="index" path="submissionsArchives"}"><i class="glyphicon glyphicon-folder-close"></i> {translate key="common.queue.short.submissionsArchives"}</a></li>
 	</ul>
 </div>

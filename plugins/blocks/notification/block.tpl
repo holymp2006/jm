@@ -10,16 +10,17 @@
  *}
  {if $currentJournal}
 <div class="block" id="notification">
-	<span class="blockTitle">{translate key="notification.notifications"}</span>
+	<span class="blockTitle"><h4 class="jm-sidebar-list-heading"><i class="fa fa-comment"></i> {translate key="notification.notifications"}</h4></span>
 	<ul>
 		{if $isUserLoggedIn}
-			<li><a href="{url page="notification"}">{translate key="common.view"}</a>
-				{if $unreadNotifications > 0}{translate key="notification.notificationsNew" numNew=$unreadNotifications}{/if}</li>
-			<li><a href="{url page="notification" op="settings"}">{translate key="common.manage"}</a></li>
+			<li class="jm-sidebar-list-item"><a href="{url page="notification"}"><i class="fa fa-comment"></i> {translate key="common.view"}</a>
+				<span class="badge">{if $unreadNotifications > 0}{translate key="notification.notificationsNew" numNew=$unreadNotifications}{/if}</span></li>
+			<li class="jm-sidebar-list-item"><a href="{url page="notification" op="settings"}"><i class="fa fa-wrench"></i> {translate key="common.manage"}</a></li>
 		{else}
-			<li><a href="{url page="notification"}">{translate key="common.view"}</a></li>
-			<li><a href="{url page="notification" op="subscribeMailList"}">{translate key="notification.subscribe"}</a></li>
+			<li><a href="{url page="notification"}"><i class="fa fa-comment"></i> {translate key="common.view"}</a></li>
+			<li><a href="{url page="notification" op="subscribeMailList"}"><i class="glyphicon glyphicon-plus"></i> {translate key="notification.subscribe"}</a></li>
 		{/if}
 	</ul>
 </div>
+<hr>
 {/if}

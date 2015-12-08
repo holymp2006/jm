@@ -560,6 +560,28 @@ nav {
 	background: #9EEB62;
 }
 
+.jm-sidebar-list-heading {
+	font-size: 15px; 
+	text-transform: uppercase; 
+	font-size: 15px; 
+	font-weight: 600;
+	margin-bottom: 10px; 
+	letter-spacing: 1px; 
+	display: inline-block; 
+	margin-top: 10px; 
+	margin-left: -2px; 
+	background-color: #006699; 
+	border-right: 6px solid #D9EDF7; 
+	padding: 0px 35px 0px 20px; 
+	width: 100%;
+	color: #FFF; 
+	line-height: 34px;	
+}
+
+.jm-sidebar-list-item {
+	margin-bottom: 8px;	
+}
+
 	/*******Everything Abdul ends*******/
 
 

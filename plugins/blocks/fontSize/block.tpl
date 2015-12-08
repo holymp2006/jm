@@ -9,6 +9,7 @@
  *
  *}
 
+{*
 <!-- Add javascript required for font sizer -->
 <script type="text/javascript">{literal}
 	<!--
@@ -23,3 +24,5 @@
 	<div id="sizer"></div>
 </div>
 <br />
+
+*}
