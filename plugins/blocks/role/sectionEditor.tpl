@@ -17,3 +17,4 @@
 		<li class="jm-sidebar-list-item"><a href="{url op="index" path="submissionsArchives"}"><i class="glyphicon glyphicon-folder-close"></i> {translate key="common.queue.short.submissionsArchives"}</a></li>
 	</ul>
 </div>
+<hr>

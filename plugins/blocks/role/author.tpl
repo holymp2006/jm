@@ -18,5 +18,5 @@
 		<li class="jm-sidebar-list-item"><a href="{url op="submit"}"><span><i class="glyphicon glyphicon-share-alt"></i> {translate key="author.submit"}</span></a></li>
 	</ul>
 </div>
-
+<hr>
 

@@ -17,7 +17,7 @@
 	<ul style="margin-top: 8px;">
 		<li class="jm-sidebar-list-item"><a href="{url op="submissions" path="submissionsUnassigned"}"><i class="glyphicon glyphicon-pushpin"></i> {translate key="common.queue.short.submissionsUnassigned"}</a>&nbsp;<span class="badge">{if $submissionsCount[0]}{$submissionsCount[0]}{else}0{/if}</span></li>
 		<li class="jm-sidebar-list-item"><a href="{url op="submissions" path="submissionsInReview"}"><i class="glyphicon glyphicon-list-alt"></i> {translate key="common.queue.short.submissionsInReview"}</a>&nbsp;<span class="badge">{if $submissionsCount[1]}{$submissionsCount[1]}{else}0{/if}</span></li>
-		<li class="jm-sidebar-list-item"><a href="{url op="submissions" path="submissionsInEditing"}"><i class="glyphicon glyphicon-pencil"></i> {translate key="common.queue.short.submissionsInEditing"}</a>&nbsp;<span class="badge">{if $submissionsCount[2]}{$submissionsCount[2]}{else}0{/if})</span></li>
+		<li class="jm-sidebar-list-item"><a href="{url op="submissions" path="submissionsInEditing"}"><i class="glyphicon glyphicon-pencil"></i> {translate key="common.queue.short.submissionsInEditing"}</a>&nbsp;<span class="badge">{if $submissionsCount[2]}{$submissionsCount[2]}{else}0{/if}</span></li>
 		<li class="jm-sidebar-list-item"><a href="{url op="submissions" path="submissionsArchives"}"><i class="glyphicon glyphicon-folder-close"></i> {translate key="common.queue.short.submissionsArchives"}</a></li>
 	</ul>
 
@@ -29,3 +29,4 @@
 		<li class="jm-sidebar-list-item"><a href="{url op="backIssues"}"><i class="glyphicon glyphicon-folder-open"></i> {translate key="editor.navigation.issueArchive"}</a></li>
 	</ul>
 </div>
+<hr>
