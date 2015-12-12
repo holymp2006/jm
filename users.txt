@@ -1,7 +1,0 @@
-excellent (Editor)
-firefighter(reviewer)
-victorise(reader)
-undertaker (section editor)
-governor (author)
-awesome (Subscription Manager)
-mugambbo (Journal Manager)
