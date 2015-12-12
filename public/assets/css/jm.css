@@ -1,0 +1,611 @@
+/**
+*jm.css
+*Author: Sam
+**/
+/*******Everything Sam starts*******/
+/**modding default styles**/
+/*#main*/
+#body {
+
+}
+#main {
+	padding: 0;
+	margin-left: 0;
+}
+#main .page-title {
+	font-family: 'Open Sans', sans-serif;
+	padding-top: 0;
+	margin: 0;
+	border-bottom: none;
+}
+
+/*a*/
+a:hover {
+	background: transparent;
+} 
+
+/*#navbar*/
+#navbar {
+	/**border-bottom: none;**/ 
+}
+/*#header*/
+#header {
+	background-color: #205081;
+	color: rgb(255, 255, 255);
+	box-shadow: rgba(0, 0, 0, 0.247059) 0px 5px 20px -5px inset;
+	border-radius: 0;
+}
+#header h1 {
+	font-family: 'Open Sans', sans-serif;
+	padding: 0;
+	color: rgb(255, 255, 255);
+}
+#content {
+	border-top: none; 
+	font-size: 14px; 
+}
+/**modding default styles end**/
+
+
+/**modding bootstrap**/
+.container {
+	max-width: 970px !important;
+}
+.jumbotron {
+	margin-bottom: 0;
+}
+.navbar {
+	border-radius: 0;
+}
+.nav-tabs.nav-stacked > li > a {
+	border: 1px solid #ddd;
+}
+.nav-tabs > li > a { 
+	border-radius: 0; 
+}
+.nav-tabs.nav-stacked > li:first-child > a {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+.nav-tabs.nav-stacked > li:last-child > a {
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+.nav-stacked > li + li {
+	margin-top: 0;
+}
+.nav-tabs {
+	border-bottom: none;
+}
+.text-left {
+	text-align: left !important;
+}
+.navbar-brand {
+	padding: 0;
+}
+.navbar-brand > img {
+	height: 100%;
+}
+.navbar-default {
+	background-color: #205081;
+	border: none;
+	color: rgb(255, 255, 255);
+	-moz-box-shadow: 0 0 15px 2px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 0 15px 2px rgba(0,0,0,0.3);
+	-o-box-shadow: 0 0 15px 2px rgba(0,0,0,0.3);
+	box-shadow: 0 0 15px 2px rgba(0,0,0,0.3);
+}
+.navbar-default .navbar-nav > li > a {
+	color: #fff;
+	opacity: .7;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:active {
+	color: #fff;
+	opacity: 1.0;
+}
+.navbar-form .input-group .form-control,
+.navbar-form .input-group .input-group-addon,
+.navbar-form .input-group .input-group-btn {
+	background-color: rgba(0, 0, 0, 0.2);
+	border-color: transparent;
+	color: rgba(255, 255, 255, 0.7);
+}
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.open>a:focus, 
+.navbar-default .navbar-nav>.open>a:hover {
+	color: #fff;
+	opacity: 1;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+/**modding bootstrap end**/
+
+
+/*main styling*/
+
+/*body*/
+body {
+	font-family: 'Open Sans', sans-serif;	
+}
+
+a:hover,
+a:focus,
+a:visited,
+a:active {
+	text-decoration: none !important;
+} 
+#navbar > .container {
+	padding-left: 0;
+}
+.control-group .controls {
+	font-size: 14px;
+}
+#searchForm .form-horizontal .control-label {
+	text-align: left;
+}
+.section-header {
+	border-bottom: 1px solid #eee;
+	margin: 30px 0 20px;
+	padding-bottom: 6px;
+}
+
+/*search*/
+#results {
+	margin-top: 25px;
+}
+
+#focusAndScopeDescription,
+.journal-setup {
+	padding-right: 2px;
+}
+
+/*#setupForm .alerts*/
+#setupForm .alert {
+	margin-bottom: 0;
+}
+/*spacing*/
+.mt-5 {
+	margin-top: 5px;
+}
+.mt-10 {
+	margin-top: 10px !important;
+}
+.mt-15 {
+	margin-top: 15px !important;
+}
+.mt-20 {
+	margin-top: 20px !important;
+}
+.mb-15 {
+	margin-bottom: 15px;
+}
+.pl-15 {
+	padding-left: 15px;
+}
+/*misc*/
+.checkbox .control-label {
+	padding-left: 35px;
+}
+.checkbox > .form-group {
+	padding-left: 20px;
+}
+ul li {
+	list-style: none;
+}
+.footer .well-lg {
+	border-radius: 0;
+	border-right: 0;
+}
+/*custom upload input-group*/
+.image-preview-input {
+	position: relative;
+	overflow: hidden;
+	margin: 0px;    
+	color: #333;
+	background-color: #fff;
+	border-color: #ccc;    
+}
+.image-preview-input input[type=file] {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.image-preview-input-title {
+	margin-left:2px;
+}
+
+/**Nav Menu**/
+.profile-img{
+	margin-right: 5px;
+	float: left;
+	background: url(../images/placeholder1.jpg) 50% 50% no-repeat; /* 50% 50% centers image in div */
+	background-size: auto 100%; /* Interchange this value depending on prefering width vs. height */
+	width: 20px;
+	height: 20px;
+}
+nav .navbar-form .btn {
+	background-color: rgba(0, 0, 0, 0.2);
+	border-color:transparent;
+	color: rgba(255, 255, 255, 0.7);
+}
+.navbar-nav > li > .dropdown-menu.bullet {
+	margin-top: 8px;
+}
+.dropdown-toggle > i.more {
+	font-size: 10px;
+	margin-left: 5px;
+	position: relative;
+	top: 1px;
+}
+
+
+/**Navbar login**/
+#login-nav{
+	min-width: 250px;
+	padding: 14px 14px 0;
+	color: #333;
+/*	overflow:hidden;
+background-color:rgba(255,255,255,.8); */
+}
+#login-nav .help-block{
+	font-size:12px    
+}
+#login-nav .bottom{
+	/*	background-color:rgba(255,255,255,.8); */
+	border-top:1px solid #ddd;
+	clear:both;
+	padding:14px;
+}
+#login-nav .form-group {
+	margin-bottom: 10px;
+}
+
+@media(max-width:768px){
+	#login-nav{
+		background-color: inherit;
+		color: #fff;
+	}
+	#login-nav .bottom{
+		background-color: inherit;
+		border-top:0 none;
+	}
+}
+
+/**little hack**/
+.navbar-nav .navbar-form #simpleQueryAutocomplete {
+	padding: 0;
+	width: 100%;
+}
+/*main styling end*/
+/*******Everything Sam ends*******/
+
+
+
+
+
+
+/*******Everything Abdul starts*******/
+/** Styling Navigation Bar Begins **/
+.nav1 {
+	background: #fff;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+}
+
+nav {
+ /** position: absolute;
+  bottom: 0;
+  height: 52px;
+  width: 100%; **/
+  background: #fff;
+}
+
+.goToTop {
+	position: fixed;
+	top: 0;
+	height: 52px;
+	z-index: 1;
+}
+/**Styling Navigation Bar Ends **/
+
+
+
+
+
+
+/* ----------------------------------------------------------------
+	Footer
+	-----------------------------------------------------------------*/
+
+
+	.footer {
+		padding-top: 10px;
+		/**padding-bottom: 10px; I removed the padding here**/
+	}
+
+	.footer_top {
+		margin-top: 2%;
+		color: #63b557;
+		font-size: 20px;
+		font-weight: 300;	
+	}
+
+	.well {
+		margin-bottom: 0px;
+	}
+
+	.text {
+		color: #FFF;
+	}
+
+	.counter {
+		font-size: 42px;
+		font-weight: 600;
+		/*font-family: "Raleway",sans-serif;*/
+	}
+
+	.counter.counter-small {
+		font-size: 28px;
+	}
+
+	.dark {
+		background-color: #333;
+		position: relative;
+		padding-top: 10px;
+		padding-bottom: 10px;	
+		border-top: 5px solid rgba(0,0,0,0.2);
+	}
+
+	.social {
+		display: inline-block;
+		cursor: pointer;
+		background-color: #33383B;
+		border-radius: 2px;
+		font-size: 20px;
+		color: #FFF;
+		text-align: center;
+		line-height: 35px;
+		margin-right: 3px;
+		margin-bottom: 5px;	
+	}
+
+	.social-item {
+		width: 35px;
+		height: 20px;
+		padding: 0px;
+		margin: 0px;	
+	}
+
+	.about-us {
+		font-size: 10px;
+	}
+
+	.navbar-main-menu-item {
+		padding-top: 4px;
+		padding-bottom: 4px;
+		font-size: 16px;
+		margin: 0 0 0 0;
+	}
+
+	/* Sweep To Bottom */
+	.hvr-sweep-to-bottom {
+	  display: inline-block;
+	  vertical-align: middle;
+	  -webkit-transform: translateZ(0);
+	  transform: translateZ(0);
+	  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	  -webkit-backface-visibility: hidden;
+	  backface-visibility: hidden;
+	  -moz-osx-font-smoothing: grayscale;
+	  position: relative;
+	  -webkit-transition-property: color;
+	  transition-property: color;
+	  -webkit-transition-duration: 0.3s;
+	  transition-duration: 0.3s;
+	}
+	.hvr-sweep-to-bottom:before {
+	  content: "";
+	  position: absolute;
+	  z-index: -1;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  background: #2098d1;
+	  -webkit-transform: scaleY(0);
+	  transform: scaleY(0);
+	  -webkit-transform-origin: 50% 0;
+	  transform-origin: 50% 0;
+	  -webkit-transition-property: transform;
+	  transition-property: transform;
+	  -webkit-transition-duration: 0.3s;
+	  transition-duration: 0.3s;
+	  -webkit-transition-timing-function: ease-out;
+	  transition-timing-function: ease-out;
+	}
+	.hvr-sweep-to-bottom:hover, .hvr-sweep-to-bottom:focus, .hvr-sweep-to-bottom:active {
+	  color: white;
+	}
+	.hvr-sweep-to-bottom:hover:before, .hvr-sweep-to-bottom:focus:before, .hvr-sweep-to-bottom:active:before {
+	  -webkit-transform: scaleY(1);
+	  transform: scaleY(1);
+	}
+
+	.hvr-sweep-to-bottom a {
+    color: #2098D1;
+    text-decoration: none;
+	}
+
+
+
+.jm-breadcrumb-setup-man {
+	/*centering*/
+	display: inline-block;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.35);
+	overflow: hidden;
+	border-radius: 5px;
+	/*Lets add the numbers for each link using CSS counters. flag is the name of the counter. to be defined using counter-reset in the parent element of the links*/
+	counter-reset: flag; 
+	font-size: 0.90em;
+	text-transform: uppercase;
+	margin-left: 10px;
+
+}
+
+.jm-breadcrumb-setup-man li {
+	text-decoration: none;
+	outline: none;
+	display: block;
+	float: left;
+	font-size: 13px;
+	line-height: 36px;
+	color: white;
+	/*need more margin on the left of links to accomodate the numbers*/
+	padding: 0 10px 0 60px;
+	background: #666;
+	background: linear-gradient(#666, #333);
+	position: relative;
+}
+/*since the first link does not have a triangle before it we can reduce the left padding to make it look consistent with other links*/
+.jm-breadcrumb-setup-man li:first-child {
+	padding-left: 46px;
+	border-radius: 5px 0 0 5px; /*to match with the parent's radius*/
+}
+.jm-breadcrumb-setup-man li:first-child:before {
+	left: 14px;
+}
+.jm-breadcrumb-setup-man li:last-child {
+	border-radius: 0 5px 5px 0; /*this was to prevent glitches on hover*/
+	padding-right: 20px;
+}
+
+/*hover/active styles*/
+.jm-breadcrumb-setup-man li.current, .jm-breadcrumb-setup-man li:hover{
+	background: #333;
+	background: linear-gradient(#333, #000);
+}
+.jm-breadcrumb-setup-man li.current:after, .jm-breadcrumb-setup-man li:hover:after {
+	background: #333;
+	background: linear-gradient(135deg, #333, #000);
+}
+
+/*adding the arrows for the breadcrumbs using rotated pseudo elements*/
+.jm-breadcrumb-setup-man li:after {
+	content: '';
+	position: absolute;
+	top: 0; 
+	right: -18px; /*half of square's length*/
+	/*same dimension as the line-height of .breadcrumb a */
+	width: 36px; 
+	height: 36px;
+	/*as you see the rotated square takes a larger height. which makes it tough to position it properly. So we are going to scale it down so that the diagonals become equal to the line-height of the link. We scale it to 70.7% because if square's: 
+	length = 1; diagonal = (1^2 + 1^2)^0.5 = 1.414 (pythagoras theorem)
+	if diagonal required = 1; length = 1/1.414 = 0.707*/
+	transform: scale(0.707) rotate(45deg);
+	/*we need to prevent the arrows from getting buried under the next link*/
+	z-index: 1;
+	/*background same as links but the gradient will be rotated to compensate with the transform applied*/
+	background: #666;
+	background: linear-gradient(135deg, #666, #333);
+	/*stylish arrow design using box shadow*/
+	box-shadow: 
+		2px -2px 0 2px rgba(0, 0, 0, 0.4), 
+		3px -3px 0 2px rgba(255, 255, 255, 0.1);
+	/*
+		5px - for rounded arrows and 
+		50px - to prevent hover glitches on the border created using shadows*/
+	border-radius: 0 5px 0 50px;
+}
+/*we dont need an arrow after the last link*/
+.jm-breadcrumb-setup-man li:last-child:after {
+	content: none;
+}
+/*we will use the :before element to show numbers*/
+.jm-breadcrumb-setup-man li:before {
+	content: counter(flag);
+	counter-increment: flag;
+	/*some styles now*/
+	border-radius: 100%;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	margin: 8px 0;
+	position: absolute;
+	top: 0;
+	left: 30px;
+	background: #444;
+	background: linear-gradient(#444, #222);
+	font-weight: bold;
+	padding-left: 6px;
+}
+
+
+.jm-flat li, .jm-flat li:after {
+	background: white;
+	color: black;
+	transition: all 0.5s;
+}
+.jm-flat li:before {
+	background: white;
+	box-shadow: 0 0 0 1px #ccc;
+}
+.jm-flat li:hover, .jm-flat li.current, 
+.jm-flat li:hover:after, .jm-flat li.current:after{
+	background: #9EEB62;
+}
+
+.jm-sidebar-list-heading {
+	font-size: 15px; 
+	text-transform: uppercase; 
+	font-size: 15px; 
+	font-weight: 600;
+	margin-bottom: 10px; 
+	letter-spacing: 1px; 
+	display: inline-block; 
+	margin-top: 10px; 
+	margin-left: -2px; 
+	background-color: #006699; 
+	border-right: 6px solid #D9EDF7; 
+	padding-left: 20px; 
+	width: 100%;
+	color: #FFF; 
+	line-height: 34px;	
+}
+
+.jm-sidebar-list-item {
+	margin-bottom: 8px;	
+}
+
+	/*******Everything Abdul ends*******/
+
+
+
+
+
+
+	/****local Open Sans font*****/
+	@font-face {
+		font-family: 'Open Sans';
+		src:url('../fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype'),
+		url("../fonts/Open_Sans/OpenSans-Regular.eot") format('embedded-opentype'); /* EOT file for IE */
+	}
+
+	@font-face {
+		font-family: 'Open Sans';
+		font-weight: bold;
+		src:url('../fonts/Open_Sans/OpenSans-Bold.ttf') format('truetype'),
+		url("../fonts/Open_Sans/OpenSans-Bold.eot") format('embedded-opentype'); /* EOT file for IE */
+	}
+
+	@font-face {
+		font-family: 'Open Sans-Light';
+		src:url('../fonts/Open_Sans/OpenSans-Light.ttf') format('truetype'),
+		url("../fonts/Open_Sans/OpenSans-Light.eot") format('embedded-opentype'); /* EOT file for IE */
+	}
+/****end Open Sans font*****/
